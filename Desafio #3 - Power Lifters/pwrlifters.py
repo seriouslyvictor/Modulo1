@@ -1,4 +1,4 @@
-#  DESAFIO #4 - COMPETIÇÃO POWER LIFTERS 2024.  
+#  DESAFIO #3 - COMPETIÇÃO POWER LIFTERS 2024.  
 #  Está acontecendo uma competição de POWER LIFTERS e atualmente há 2 atletas competindo, Chris Bumstead e Ramón Dino 
 #  Sua missão é criar um código que irá determinar qual dos atletas é o vencedor. 
 #  Regras: 
@@ -12,7 +12,7 @@
 #  Ramón Dino: 115, 190, 136, 197.
 
 
-print("🏋️ DESAFIO #4 - COMPETIÇÃO POWER LIFTERS 2024 🏋️")
+print("🏋️ DESAFIO #3 - COMPETIÇÃO POWER LIFTERS 2024 🏋️")
 print("Chris Bumstead vs Ramón Dino — Quem será o campeão?\n")
 
 
