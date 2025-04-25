@@ -1,11 +1,9 @@
-# Let's learn about LOOPS in Python!
-
 # --------------------------------
 # 1. FOR LOOP
 # --------------------------------
 
 print("Vamos fazer nossas reps na academia:")
-for index in range(11):  # range(start, stop) goes from 1 to 5
+for index in range(11):  
     print("🏋️‍♀️ rep número: ", index)
 
 
@@ -61,6 +59,22 @@ for num in range(11):
     else:
         print(num, "é ímpar")
 
+# --------------------------------
+# 6. Descobrindo se algo existe em uma lista ou "frase"
+# --------------------------------
+
+deuses = ["Apollo", "Zeus", "Hades"]
+pergunta = input("Digite o nome de um Deus Grego: \n")
+if pergunta in deuses:
+    print(f"Correto {pergunta} é um Deus Grego!")
+else:
+    print(f"{pergunta} não é um Deus Grego...")
+
+email = input("Digite seu email: \n")
+if "@" in email:
+    print("Obrigado!")
+else:
+    print("Este não parece ser um email válido...")
 
 # --------------------------------
 # Mini Desafios
