@@ -1,0 +1,17 @@
+lista_palavras= [
+    "abacaxi",
+    "banana",
+    "laranja",
+    "manga",
+    "uva",
+    "morango",
+    "melancia",
+    "cabelos",
+    "computador",
+    "programacao",
+    "python",
+    "desenvolvimento",
+    "tecnologia",
+    "internet",
+    "jogo",
+]
