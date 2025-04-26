@@ -56,4 +56,4 @@ while not game_over:
     try:
         print(forca[erros])
     except IndexError:
-        print(forca[-1])
+        print("/==== Game Over! ====/")
