@@ -108,3 +108,22 @@ numero = int(input("\nDigite um número para calcular o fatorial: "))
 for i in range(1, numero + 1):
     fatorial *= i
 print(f"O fatorial de {numero} é: {fatorial}")  
+
+#5 . Faça um loop que onde Hades irá percorrer uma lista de almas e condenar ou salvar cada uma delas, ao final do loop, imprima quantas almas foram salvas e quantas foram condenadas.
+
+almas = ["justa", "injusta", "neutra", "justa", "injusta", "neutra", "justa", "injusta", "neutra", "justa", "injusta", "injusta", "injusta", "justa", "injusta", "neutra"]
+condenadas = 0
+redimidas = 0
+
+for alma in almas:
+    if alma == "justa":
+        redimidas += 1
+    elif alma == "injusta":
+        condenadas += 1
+    else:
+        print("Hades não toma nenhuma ação.")
+print(f"\nAlmas redimidas: {redimidas}")
+print(f"Almas condenadas: {condenadas}")
+
+# Desafio 6 - Gerador de Senhas.
+# Desafio 7 - Jogo da Forca.
