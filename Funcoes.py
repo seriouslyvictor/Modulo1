@@ -49,4 +49,36 @@ def julgamento_hades(pontuacao):
     else:
         print("Hades envia a alma para o Tártaro, sofrimento eterno.")
 
-    
+# Pequeno Programa, Oráculos de Delfos:
+def consultar_delfos (pergunta):
+    respostas = [
+    "Zeus aprova seus planos... por enquanto.",
+    "Atena sorri para suas escolhas.",
+    "Hades observa com interesse.",
+    "Apolo envia luz ao seu caminho.",
+    "Afrodite interfere com intenções misteriosas.",
+    "Os deuses estão divididos sobre isso.",
+    "Nêmesis já está a caminho... cuidado.",
+]
+    resposta = random.choice(respostas)
+    mensagem = f"\n 🔮 O oráculo responde: {resposta} \n"
+    return mensagem
+
+print("/=== Bem vindo ao Oráculo de Delfos ===/")
+executando = True
+while executando:
+    print("Escolha a opção desejada:")
+    print("1 - Perguntar para Delfos")
+    print("2 - Consultar outro Oráculo")
+    print("3 - Sair")
+    choice = int(input("Digite a Opção: \n"))
+    if choice == 1:
+        pergunta_usuario = input("O que deseja pergunta para Delfos hoje?")
+        print(consultar_delfos(pergunta_usuario))
+    elif choice == 2:
+        print("Os outros Oráculos não estão respondendo...")
+    elif choice == 3:
+        print("Seu retorno será em breve, até logo.")
+        executando = False
+    else:
+        print("\n⚠ Opção inválida, leia novamente. ⚠\n")

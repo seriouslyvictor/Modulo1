@@ -52,3 +52,29 @@ deuses_info = {
 }
 
 print(deuses_info["Hades"]["arma"])
+
+# Mini Exercicio 1
+# Crie um programa que irá converter uma pontuação de almas em uma avaliação de almas.
+# Exemplo: 
+# entrada "Brizola": 40
+# saida: "Brizola": "Neutra"
+# A saída deve ser um novo dicionário contendo os nomes original e a avaliação.
+
+# As pontuação devem seguir os critérios abaixo:
+# 81 ~ 100: Justa
+# 61 ~ 80: Boa
+# 41 ~ 60: Neutra
+# 21 ~ 40: Ruim
+# 0 ~ 20: Injusta
+
+pontuacao_almas = {
+    'Brizola': 40,
+    'Collor': 10,
+    'Ada Lovelace': 85,
+    'Verso': 100,
+    'Odesnildo': 90,
+    'Melania': 55
+}
+
+avaliacao_almas = {}
+
