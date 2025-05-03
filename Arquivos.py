@@ -48,5 +48,4 @@ with open("deuses.json", mode="r", encoding="UTF-8") as arquivo:
 #Mini Desafio #1
 # Altere o programa do Desafio #9 para os seguintes critérios:
 # 1. Carregar a lista dos Deuses a partir de um JSON em um dicionário chamado livro_dos_deuses
-# 2. Acresce uma nova opção chamada: 5. Salvar e sair, essa opção deve salvar o dicionário livro_dos_deuses no arquivo JSON lido anteriormente, use o modo "w" para isso.
-# 3.
+# 2. Acrescente uma nova opção chamada: 5. Salvar e sair, essa opção deve salvar o dicionário livro_dos_deuses no arquivo JSON lido anteriormente, use o modo "w" para isso.

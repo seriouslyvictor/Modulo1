@@ -1,0 +1,132 @@
+[
+  {
+    "term": "Argentina",
+    "description": "País vizinho do Brasil",
+    "searches": 450
+  },
+  {
+    "term": "Neymar",
+    "description": "Famoso jogador de futebol brasileiro",
+    "searches": 720
+  },
+  {
+    "term": "Praias do Nordeste",
+    "description": "Atração turística popular no Brasil",
+    "searches": 580
+  },
+  {
+    "term": "Estados Unidos",
+    "description": "País da América do Norte",
+    "searches": 610
+  },
+  {
+    "term": "Anitta",
+    "description": "Cantora pop brasileira",
+    "searches": 690
+  },
+  {
+    "term": "Amazônia",
+    "description": "Importante floresta tropical brasileira",
+    "searches": 550
+  },
+  {
+    "term": "Canadá",
+    "description": "País da América do Norte",
+    "searches": 380
+  },
+  {
+    "term": "Pelé",
+    "description": "Rei do futebol brasileiro",
+    "searches": 800
+  },
+  {
+    "term": "Cachoeiras do Brasil",
+    "description": "Belezas naturais brasileiras",
+    "searches": 490
+  },
+  { "term": "Chile", "description": "País da América do Sul", "searches": 410 },
+  {
+    "term": "Gisele Bündchen",
+    "description": "Top model brasileira",
+    "searches": 530
+  },
+  {
+    "term": "Carnaval do Rio de Janeiro",
+    "description": "Festa popular brasileira",
+    "searches": 750
+  },
+  {
+    "term": "Portugal",
+    "description": "País europeu com laços históricos com o Brasil",
+    "searches": 480
+  },
+  {
+    "term": "Chico Buarque",
+    "description": "Cantor e compositor brasileiro",
+    "searches": 360
+  },
+  {
+    "term": "Pão de Açúcar",
+    "description": "Famoso ponto turístico do Rio de Janeiro",
+    "searches": 620
+  },
+  { "term": "Japão", "description": "País asiático", "searches": 500 },
+  {
+    "term": "Ivete Sangalo",
+    "description": "Cantora de axé brasileira",
+    "searches": 590
+  },
+  {
+    "term": "Festa Junina",
+    "description": "Celebração cultural brasileira",
+    "searches": 510
+  },
+  { "term": "Alemanha", "description": "País europeu", "searches": 430 },
+  {
+    "term": "Oscar Niemeyer",
+    "description": "Arquiteto brasileiro famoso",
+    "searches": 320
+  },
+  {
+    "term": "Cristo Redentor",
+    "description": "Monumento famoso do Rio de Janeiro",
+    "searches": 670
+  },
+  { "term": "Itália", "description": "País europeu", "searches": 460 },
+  {
+    "term": "Gal Costa",
+    "description": "Cantora importante da MPB",
+    "searches": 390
+  },
+  {
+    "term": "Feijoada",
+    "description": "Prato típico brasileiro",
+    "searches": 540
+  },
+  {
+    "term": "México",
+    "description": "País da América do Norte",
+    "searches": 400
+  },
+  {
+    "term": "Ayrton Senna",
+    "description": "Piloto de Fórmula 1 brasileiro",
+    "searches": 600
+  },
+  {
+    "term": "Copa do Mundo",
+    "description": "Evento esportivo global",
+    "searches": 700
+  },
+  { "term": "França", "description": "País europeu", "searches": 370 },
+  {
+    "term": "Machado de Assis",
+    "description": "Escritor brasileiro renomado",
+    "searches": 300
+  },
+  {
+    "term": "Caipirinha",
+    "description": "Coquetel brasileiro famoso",
+    "searches": 470
+  }
+]

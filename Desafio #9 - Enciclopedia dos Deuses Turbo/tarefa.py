@@ -9,10 +9,6 @@
 # 3. Atualizar um deus existente
 # 4. Listar todos os deuses
 # 5. Sair
-### Exemplo de um loop while: ###
-### executando = True ###
-### while executando: ###
-
 
 # TODO 3: Criar a lógica para a opção 1 - Consultar um deus
 # - Pedir ao usuário o nome do deus
