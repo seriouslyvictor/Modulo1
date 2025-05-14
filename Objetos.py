@@ -33,4 +33,3 @@ dog1.buscar_osso()
 #Perguntas para reflexão:
 #O que acontece se esquecermos de passar um dos parâmetros ao criar um novo cachorro?
 #Seria possível criar 10 cachorros rapidamente usando um Loop?
-
