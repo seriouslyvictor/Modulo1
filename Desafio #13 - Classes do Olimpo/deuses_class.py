@@ -37,12 +37,12 @@ class Olimpo:
         if len(self.deuses) <= 0:
             print("Nenhum deus está no Olimpo...")
             return
-        
+            
         max_god = self.deuses[0]
         for deus in self.deuses:
             if deus.followers > max_god.followers:
                 mais_adorado = deus
-        print(f"O maior deus do Olimpo atualmente é: {max_god}")
+        print(f"O maior Deus do Olimpo atualmente é: {max_god}")
 
 
 
