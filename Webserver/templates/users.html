@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    {% if profiles %}
+    <h1>Olá, {{profiles[0].perfil}}</h1>
+    <p>Você tem {{profiles[0].seguidores}} seguidores e segue {{profiles[0].seguindo}} pessoas</p>
+    {% else %}
+    <h1>Nenhum perfil encontrado!</h1>
+    {% endif %}
+    <hr>
+    {% for profile in profiles %}
+    <h1>Olá, {{profile.perfil}}</h1>
+    <p>Você tem {{profile.seguidores}} seguidores e segue {{profile.seguindo}} pessoas</p>
+    {% endfor %}
+</body>
+
+</html>
