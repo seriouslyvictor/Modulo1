@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 312px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: stretch;
+            gap: .75rem;
+        }
+
+        input {
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="{{url_for('receber_dados')}}" method="POST">
+        <label for="nome">Nome: <input type="text" name="nome" placeholder="Digite seu nome"></label>
+        <label for="email">Mail:<input type="email" name="email" placeholder="Digite seu email"></label>
+        <label for="senha">ASS:<input type="password" name="senha" placeholder="Digite sua senha"></label>
+
+        <button type="submit">Donezo</button>
+    </form>
+</body>
+
+</html>
