@@ -1,14 +1,15 @@
+# Este exercício é baseado no jogo original do site Higher Lower Game: https://www.higherlowergame.com/
 from arts import logo, vs
 import random
 import json
 with open(r"Desafio #10 - Duelo\dados.json", mode="r", encoding="utf-8") as arquivo:
-    data = json.load(arquivo)
+    dados = json.load(arquivo)
 
 
-def format_data(account):
-    account_name = account["term"]
-    account_descr = account["description"]
-    return f"{account_name}, {account_descr}"
+def formatar_dados(conta):
+    nome_conta = conta["termo"]
+    descricao_conta = conta["descricao"]
+    return f"{nome_conta}, {descricao_conta}"
 
 
 # def check_answer(user_guess, pesquisa_a, pesquisa_b):
@@ -23,11 +24,11 @@ def format_data(account):
 #         else:
 #             return False
         
-def check_answer(user_guess, pesquisa_a, pesquisa_b):
+def verificar_resposta(palpite_usuario, pesquisa_a, pesquisa_b):
     if pesquisa_a > pesquisa_b:
-        return user_guess == "a"
+        return palpite_usuario == "a"
     else:
-        return user_guess == "b"
+        return palpite_usuario == "b"
 
 
 
@@ -35,38 +36,38 @@ print(logo)
 pontos = 0
 executando = True
 
-termo_b = random.choice(data)
+termo_b = random.choice(dados)
 
 
 while executando:
 
 
     termo_a = termo_b
-    termo_b = random.choice(data)
+    termo_b = random.choice(dados)
 
     if termo_a == termo_b:
-        termo_b = random.choice(data)
+        termo_b = random.choice(dados)
 
-    print(f"Compare A: {format_data(termo_a)}.")
+    print(f"Compare A: {formatar_dados(termo_a)}.")
     print(vs)
-    print(f"Contra B: {format_data(termo_b)}.")
+    print(f"Contra B: {formatar_dados(termo_b)}.")
 
-    # Ask user for a guess.
-    guess = ""
-    while guess not in ["a", "b"]:
-        guess = input("Qual termo é mais pesquisado? Digite A ou B: ").lower()
+    # Pedir palpite do usuário.
+    palpite = ""
+    while palpite not in ["a", "b"]:
+        palpite = input("Qual termo é mais pesquisado? Digite A ou B: ").lower()
 
     print("\n" * 20)
     print(logo)
 
 
-    rank_a = termo_a["searches"]
-    rank_b = termo_b["searches"]
+    classificacao_a = termo_a["pesquisas"]
+    classificacao_b = termo_b["pesquisas"]
 
 
-    is_correct = check_answer(guess, rank_a, rank_b)
+    esta_correto = verificar_resposta(palpite, classificacao_a, classificacao_b)
 
-    if is_correct:
+    if esta_correto:
         pontos += 1
         print(f"🎉 Correto! Pontuação: {pontos} 🎉")
     else:
