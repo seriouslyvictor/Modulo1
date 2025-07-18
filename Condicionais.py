@@ -1,81 +1,81 @@
 # Condicionais são usadas para tomar decisões com base nos valores booleanos verdadeiro ou falso.
 # As condicionais podem ser simples ou compostas, com ajuda de operadores lógicos para determinar o resultado.
 
-# What is an if statement?
-# It lets the program make a decision based on a condition.
+# O que é uma declaração if?
+# Permite que o programa tome uma decisão baseada em uma condição.
 
-# Basic structure:
-# if condition:
-#     do something
+# Estrutura básica:
+# if condição:
+#     faça algo
 
-# Here's a basic example:
-age = 18
+# Aqui está um exemplo básico:
+idade = 18
 
-if age >= 18:
-    print("You are an adult!")
+if idade >= 18:
+    print("Você é maior de idade!")
 
-# If the condition is false, nothing happens.
-# Let's add an 'else' to handle the other case.
+# Se a condição for falsa, nada acontece.
+# Vamos adicionar um 'else' para lidar com o outro caso.
 
-age = 16
+idade = 16
 
-if age >= 18:
-    print("You are an adult!")
+if idade >= 18:
+    print("Você é maior de idade!")
 else:
-    print("You are not an adult yet.")
+    print("Você ainda não é maior de idade.")
 
-# We can also add 'elif' (which means "else if") to check more than one condition.
+# Também podemos adicionar 'elif' (que significa "senão se") para verificar mais de uma condição.
 
-temperature = 25
+temperatura = 25
 
-if temperature > 30:
-    print("It's hot outside!")
-elif temperature > 20:
-    print("The weather is nice.")
+if temperatura > 30:
+    print("Está quente lá fora!")
+elif temperatura > 20:
+    print("O clima está agradável.")
 else:
-    print("It's a bit cold today.")
+    print("Está um pouco frio hoje.")
 
-# Comparison operators we can use in if statements:
-# ==  means equal
-# !=  means not equal
-# >   greater than
-# <   less than
-# >=  greater than or equal to
-# <=  less than or equal to
+# Operadores de comparação que podemos usar em declarações if:
+# ==  significa igual
+# !=  significa diferente
+# >   maior que
+# <   menor que
+# >=  maior ou igual a
+# <=  menor ou igual a
 
-# Logical operators (for combining conditions):
-# and  --> both must be true
-# or   --> at least one must be true
-# not  --> reverses the condition
+# Operadores lógicos (para combinar condições):
+# and  --> ambos devem ser verdadeiros
+# or   --> pelo menos um deve ser verdadeiro
+# not  --> inverte a condição
 
-# Example using 'and':
-money = 10
-hungry = True
+# Exemplo usando 'and':
+dinheiro = 10
+com_fome = True
 
-if money >= 5 and hungry:
-    print("You can buy a snack!")
+if dinheiro >= 5 and com_fome:
+    print("Você pode comprar um lanche!")
 
-# Example using 'or':
-is_raining = False
-have_umbrella = True
+# Exemplo usando 'or':
+esta_chovendo = False
+tem_guarda_chuva = True
 
-if is_raining or have_umbrella:
-    print("You're good to go outside!")
+if esta_chovendo or tem_guarda_chuva:
+    print("Você está pronto para sair!")
 
-# Example using 'not':
-logged_in = False
+# Exemplo usando 'not':
+logado = False
 
-if not logged_in:
-    print("Please log in to continue.")
+if not logado:
+    print("Por favor, faça login para continuar.")
 
-# You can also use variables that are already True/False (called booleans)
+# Você também pode usar variáveis que já são True/False (chamadas booleanos)
 
-is_hungry = True
+esta_com_fome = True
 
-if is_hungry:
-    print("Time to eat!")
+if esta_com_fome:
+    print("Hora de comer!")
 else:
-    print("Not hungry right now.")
+    print("Não estou com fome agora.")
 
 #Desafio Power Lifters
 #Desafio Pizza-o-tron
