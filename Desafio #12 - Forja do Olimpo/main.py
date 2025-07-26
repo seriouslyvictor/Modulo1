@@ -1,6 +1,5 @@
-import artwork, time
-
-RECEITAS = {
+import artwork
+receitas = {
     "espada": {
         "ingredientes": {
             "ferro": 3,
@@ -41,64 +40,18 @@ moedas = {
     "Moeda de Cobre": 0.1,
 }
 
-def imprimir_relatorio():
-    print("\n===== Relatório da Oficina =====")
-    for material, qtd in recursos.items():
-        print(f"{material.capitalize()}: {qtd}")
-    print(f"Ouro ganho: {ouro} 💰")
-    print("================================\n")
+#TODO#1 Criar o menu principal que deve conter as opções de fabricar um item, imprimir o relatório da oficina e sair do programa, você pode criar o menu usando um loop while e um input para receber a opção do usuário.
+# O usuário só sai do sistema quando digitar a opção de sair.
+# se o usuário digitar "inv", deve imprimir o inventário de recursos disponíveis e o ouro ganho até o momento.
+# O usuário deve poder escolher fabricar qualquer item das receitas digitando o nome do item, por exemplo: "espada".
 
-def atualizar_oficina(item):
-    global ouro
-    ingredientes = RECEITAS[item]["ingredientes"]
-    for material in ingredientes:
-        recursos[material] -= ingredientes[material]
-    ouro += RECEITAS[item]["custo"]
 
-def fabricar_item(item):
-    receita = RECEITAS[item]["ingredientes"]
-    for material, necessario in receita.items():
-        if necessario > recursos.get(material, 0):
-            print(f"Faltam recursos: {material} insuficiente para fabricar {item}!")
-            return
+#TODO#2 Criar uma função para imprimir o relatório da oficina, essa função deve imprimir a quantiade de cada recurso disponível e o ouro ganho até o momento.
 
-    print(f"O custo para fabricar um(a) {item} é {RECEITAS[item]['custo']} ouro.")
-    moedas_inseridas = []
-    for moeda, valor in moedas.items():
-        quantidade = int(input(f"Quantas {moeda}s você quer inserir? "))
-        moedas_inseridas.append(quantidade * valor)
+#TODO#3 Criar uma função chamada fabricar_item que recebe o nome do item a ser fabricado, verifica se os recursos necessários estão disponíveis e imprime o custo do item. Se os recursos não estiverem disponíveis, deve imprimir uma mensagem informando que faltam recursos.
 
-    total_pago = sum(moedas_inseridas)
-    custo_item = RECEITAS[item]["custo"]
+#TODO#4 Crie uma função chamada receber_moedas que solicita ao usuário quantas moedas de ouro, prata e cobre ele deseja receber. A função deve atualizar o valor do ouro com base nas moedas recebidas. Essa função deve ser chamada dentro da função fabricar_item após verificar se os recursos estão disponíveis.
 
-    if total_pago >= custo_item:
-        troco = round(total_pago - custo_item, 2)
-        atualizar_oficina(item)
-        print("Clank! Clank! Clank!")
-        time.sleep(1)
-        print(f"✅ {item.capitalize()} fabricado com sucesso! ⚔️")
-        time.sleep(1)
-        print(RECEITAS[item]["arte"])
-        if troco > 0:
-            print(f"💰 Seu troco é {troco} ouro.")
-    else:
-        print("❌ Ouro insuficiente... Transação cancelada.")
+#TODO#5 Criar uma função chamada atualizar_estoque que recebe o nome do item fabricado, atualiza os recursos disponíveis e o ouro ganho. Essa função deve ser chamada após a fabricação de um item.
 
-def principal():
-    ligada = True
-    while ligada:
-        escolha = input("O que deseja fabricar? (espada/escudo/arco) ou digite 'sair': ").lower()
-        if escolha == "sair":
-            print("🔧 Desligando a oficina...")
-            ligada = False
-        elif escolha == "inv":
-            imprimir_relatorio()
-        elif escolha in RECEITAS:
-            fabricar_item(escolha)
-        else:
-            print("Comando inválido. Tente novamente.")
-
-print("🏰 Bem-vindo à Oficina Medieval! 🪓")
-print(artwork.splash)
-print("Você pode fabricar: Espada, Escudo, Arco")
-principal()
+#TODO#6 Crie uma função chamada entregar_item que recebe o nome do item fabricado e imprime uma mensagem de entrega do item, incluindo a arte do item.
