@@ -320,3 +320,13 @@ estoque = {'macas': 10, 'bananas': 5}
 mudancas = {'macas': -15, 'laranjas': 8, 'bananas': 3}
 resultado = atualizar_estoque(estoque, mudancas)
 print(resultado['macas'])
+
+import json
+# with open("dados.json", "r", encoding="utf-8") as f:
+#     conteudo = json.load(f)
+
+dicionario = {"nome": "Thor", 
+              "idade": 1500, 
+              "poderes": ["raio", "força"]} 
+with open("thor.json", "w", encoding="utf-8") as f:
+    json.dump(dicionario, f, ensure_ascii=False, indent=4)
