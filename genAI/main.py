@@ -3,7 +3,7 @@ from google.genai import types
 import time
 
 #pratica não recomendada, apenas para demonstração e clareza.
-GEMINI_API_KEY = "AIzaSyB-1ylcNzzIHFjgiK20f5X5bWzpSktaMew"
+GEMINI_API_KEY = "AIzaSyB-zzzzzzzzzzzz" # essa chave é inválida!
 MODEL_FAST = "gemini-2.5-flash-lite"
 
 cliente = genai.Client(api_key=GEMINI_API_KEY)
