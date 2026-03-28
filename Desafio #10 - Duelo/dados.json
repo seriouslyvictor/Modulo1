@@ -1,0 +1,132 @@
+[
+  {
+    "termo": "Argentina",
+    "descricao": "País vizinho do Brasil",
+    "pesquisas": 450
+  },
+  {
+    "termo": "Neymar",
+    "descricao": "Famoso jogador de futebol brasileiro",
+    "pesquisas": 720
+  },
+  {
+    "termo": "Praias do Nordeste",
+    "descricao": "Atração turística popular no Brasil",
+    "pesquisas": 580
+  },
+  {
+    "termo": "Estados Unidos",
+    "descricao": "País da América do Norte",
+    "pesquisas": 610
+  },
+  {
+    "termo": "Anitta",
+    "descricao": "Cantora pop brasileira",
+    "pesquisas": 690
+  },
+  {
+    "termo": "Amazônia",
+    "descricao": "Importante floresta tropical brasileira",
+    "pesquisas": 550
+  },
+  {
+    "termo": "Canadá",
+    "descricao": "País da América do Norte",
+    "pesquisas": 380
+  },
+  {
+    "termo": "Pelé",
+    "descricao": "Rei do futebol brasileiro",
+    "pesquisas": 800
+  },
+  {
+    "termo": "Cachoeiras do Brasil",
+    "descricao": "Belezas naturais brasileiras",
+    "pesquisas": 490
+  },
+  { "termo": "Chile", "descricao": "País da América do Sul", "pesquisas": 410 },
+  {
+    "termo": "Gisele Bündchen",
+    "descricao": "Top model brasileira",
+    "pesquisas": 530
+  },
+  {
+    "termo": "Carnaval do Rio de Janeiro",
+    "descricao": "Festa popular brasileira",
+    "pesquisas": 750
+  },
+  {
+    "termo": "Portugal",
+    "descricao": "País europeu com laços históricos com o Brasil",
+    "pesquisas": 480
+  },
+  {
+    "termo": "Chico Buarque",
+    "descricao": "Cantor e compositor brasileiro",
+    "pesquisas": 360
+  },
+  {
+    "termo": "Pão de Açúcar",
+    "descricao": "Famoso ponto turístico do Rio de Janeiro",
+    "pesquisas": 620
+  },
+  { "termo": "Japão", "descricao": "País asiático", "pesquisas": 500 },
+  {
+    "termo": "Ivete Sangalo",
+    "descricao": "Cantora de axé brasileira",
+    "pesquisas": 590
+  },
+  {
+    "termo": "Festa Junina",
+    "descricao": "Celebração cultural brasileira",
+    "pesquisas": 510
+  },
+  { "termo": "Alemanha", "descricao": "País europeu", "pesquisas": 430 },
+  {
+    "termo": "Oscar Niemeyer",
+    "descricao": "Arquiteto brasileiro famoso",
+    "pesquisas": 320
+  },
+  {
+    "termo": "Cristo Redentor",
+    "descricao": "Monumento famoso do Rio de Janeiro",
+    "pesquisas": 670
+  },
+  { "termo": "Itália", "descricao": "País europeu", "pesquisas": 460 },
+  {
+    "termo": "Gal Costa",
+    "descricao": "Cantora importante da MPB",
+    "pesquisas": 390
+  },
+  {
+    "termo": "Feijoada",
+    "descricao": "Prato típico brasileiro",
+    "pesquisas": 540
+  },
+  {
+    "termo": "México",
+    "descricao": "País da América do Norte",
+    "pesquisas": 400
+  },
+  {
+    "termo": "Ayrton Senna",
+    "descricao": "Piloto de Fórmula 1 brasileiro",
+    "pesquisas": 600
+  },
+  {
+    "termo": "Copa do Mundo",
+    "descricao": "Evento esportivo global",
+    "pesquisas": 700
+  },
+  { "termo": "França", "descricao": "País europeu", "pesquisas": 370 },
+  {
+    "termo": "Machado de Assis",
+    "descricao": "Escritor brasileiro renomado",
+    "pesquisas": 300
+  },
+  {
+    "termo": "Caipirinha",
+    "descricao": "Coquetel brasileiro famoso",
+    "pesquisas": 470
+  }
+]

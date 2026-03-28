@@ -1,0 +1,11 @@
+{
+    "nome_planeta": "Terra",
+    "desc": "O terceiro planeta a partir do Sol e o único corpo celeste conhecido por abrigar vida. É um planeta telúrico com uma superfície sólida, coberta por oceanos de água líquida e uma atmosfera rica em nitrogênio e oxigênio.",
+    "composicao": "Atmosfera: Nitrogênio (78%), Oxigênio (21%), Argônio (0.9%), Dióxido de Carbono (0.04%), e traços de outros gases. Superfície: Rochas, metais, água e matéria orgânica.",
+    "raio": 6371,
+    "rotacao": 0.997,
+    "translacao": 365.25,
+    "satelites": [
+        "Lua"
+    ]
+}
