@@ -1,44 +1,39 @@
-from flask import Flask, render_template, request, abort
-import json, os
+from flask import Flask, render_template, request
+
 app = Flask(__name__)
 
-users =[{"perfil": "Thea", "seguidores": 50, "seguindo": 250, "publicações": 38}, {"perfil": "Theo", "seguidores": 150, "seguindo": 5, "publicações": 50}]
+frutas = ["Ovo", "Maçã", "Batata", "Apargos"]
+
+#Rota principal, raiz do site
 @app.route("/")
-def home():
+def principal():
     return render_template("index.html")
 
-@app.route('/users')
-def display_users(profiles=None):
-    return render_template("users.html", profiles=users)
+#Outra rota
+@app.route("/sobre")
+def sobre():
+    return "essa página ainda não existe"
 
-@app.route("/users/<username>")
-def display_user(username):
-    user = None
-    for item in users:
-        if item["perfil"].lower() == username.lower():
-            user = item
-            break
-    if user:
-        return render_template("single.html", user=user)
-    else:
-        return render_template("index.html")
+#Rota dinâmica
+@app.route("/sobre/<string:pessoa>")
+def sobre_pessoa(pessoa):
+    return f"Essa é uma página sobre {pessoa}"
 
-@app.route("/submit", methods=["POST", "GET"])
-def receber_dados():
-    if request.method == "GET":
-        return render_template("index.html")
-    try:
-        with open(file="Webserver/leads.json", mode="r", encoding="utf-8") as file:
-            existing_data = json.load(file)
-    except FileNotFoundError:
-        existing_data = {}
-    
-    form_data = {request.form["nome"]: {"email": request.form["email"], "zaperson": request.form["senha"]}}
-    existing_data.update(form_data)
-    
-    with open(file="Webserver/leads.json", mode="w", encoding="utf-8") as file:
-        json.dump(existing_data, file, indent=4, ensure_ascii=False)
-    return render_template("index.html")
-    
-if __name__ == "__main__":
-    app.run(debug=True)
+
+@app.route("/surpresa")
+def assunto_aleatorio():
+    import random
+    escolhas = random.choice(["Futebol", "Rugby", "Basquete", "Voleiballz"])
+    return f"<h1>Essa é uma página sobre {escolhas}</h1>"
+
+#rotas com frutas
+@app.route("/feira", methods=["GET", "POST"])
+def carregar_feira():
+    if request.method =="POST":
+        frutas.append(request.form.get("fruta"))
+    return render_template("feira.html", todas_frutas=frutas)
+
+@app.route("/deus")
+def carregar_deus():
+    deus = {'nome': 'zeus', 'poder': 'raio', 'rank': 1 }
+    return render_template('deuses.html', deus=deus)
