@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block conteudo %}
+    <h1>Todos alunos</h1>
+    <ol>
+    {% for aluno in alunos %}
+        <li>
+            Nome: {{aluno.nome}} -- Nota: {{aluno.nota}}
+        </li>
+    {% endfor %}
+    </ol>
+    <form action="/alunos" method="post">
+        <label for=""> Nome: <input type="text" name="nome"></label>
+        <label for="">Nota: <input type="number" name="nota" id=""></label>
+        <br>
+        <button type="submit">Vamos!</button>
+        <button type="reset">Limpar kraio</button>
+    </form>
+{% endblock %}
