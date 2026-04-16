@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="page">
+        <a class="back-link" href="/">Voltar para todos os exercicios</a>
+        <h1>4a - Cartao de Pet</h1>
+
+        <div class="card">
+            <p>Nome: {{ pet.nome }}</p>
+            <p>Especie: {{ pet.especie }}</p>
+            <p>Idade: {{ pet.idade }}</p>
+
+            {% if pet.vacinado %}
+                <p class="tag success">Vacinado</p>
+            {% else %}
+                <p class="tag danger">Nao vacinado</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

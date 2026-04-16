@@ -1,0 +1,109 @@
+body {
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #f5f1e8;
+    color: #1f1f1f;
+}
+
+.page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+.card {
+    background-color: #ffffff;
+    border: 2px solid #d6c6a8;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 18px;
+}
+
+.section-box {
+    background-color: #fffaf0;
+    border: 2px solid #d6c6a8;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+.link-list li {
+    margin-bottom: 8px;
+}
+
+.back-link {
+    display: inline-block;
+    margin-bottom: 16px;
+}
+
+.product-image {
+    width: 220px;
+    max-width: 100%;
+    display: block;
+    margin-bottom: 12px;
+}
+
+.star {
+    font-size: 28px;
+    color: #f0b400;
+}
+
+.transaction-list {
+    list-style: none;
+    padding-left: 0;
+}
+
+.transaction-list li {
+    margin-bottom: 10px;
+}
+
+.money-in {
+    color: #157347;
+    font-weight: bold;
+}
+
+.money-out {
+    color: #b02a37;
+    font-weight: bold;
+}
+
+.tag {
+    display: inline-block;
+    padding: 8px 12px;
+    border-radius: 999px;
+    font-weight: bold;
+}
+
+.success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+}
+
+.warning {
+    background-color: #fff3cd;
+    color: #664d03;
+}
+
+.danger {
+    background-color: #f8d7da;
+    color: #842029;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #d6c6a8;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2e6cf;
+}
+
+.product-row h2 {
+    margin-top: 0;
+}

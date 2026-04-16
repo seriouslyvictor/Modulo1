@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Times</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="page">
+        <a class="back-link" href="/">Voltar para todos os exercicios</a>
+        <h1>4d - Dados Aninhados</h1>
+
+        {% for time in times %}
+            <div class="card">
+                <h2>{{ time.nome }}</h2>
+                <ul>
+                    {% for membro in time.membros %}
+                        <li>{{ membro }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

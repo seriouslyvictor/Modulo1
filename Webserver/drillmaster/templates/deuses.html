@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<h2>Aqui está a ficha completa de {{deus.get('nome', "Desconhecido").capitalize()}}</h2>
+<hr>
+<ul>
+    <li>Poder: {{deus.get('poder', "Desconhecido")}}</li>
+    <li>Rank: {{deus.get('rank', "Não Ranqueado")}}</li>
+</ul>
+
+{% endblock content %}

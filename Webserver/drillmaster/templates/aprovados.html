@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprovados</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="page">
+        <a class="back-link" href="/">Voltar para todos os exercicios</a>
+        <h1>2a - Candidatos Aprovados</h1>
+
+        <div class="card">
+            <ul>
+                {% for candidato in candidatos %}
+                    <li>{{ candidato }}</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

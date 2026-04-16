@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <style>
+        body {
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+            color: #1f2937;
+            padding: 40px;
+            height: 100vh;
+        }
+
+        h1 {
+            margin-top: 18px;
+            margin-bottom: 24px;
+            font-size: 28px;
+            color: transparent;
+            background-clip: text;
+            background-image: linear-gradient(to bottom, white, rgb(173, 173, 173));
+
+        }
+
+        section {
+            background-color: white;
+            border: 2px solid #d8b4fe;
+            border-radius: 16px;
+            padding: 24px;
+            max-width: 500px;
+        }
+
+        .bio {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>1a - Cartao de Perfil estilo Instagram</h1>
+
+    <section>
+        <h2>{{ nome }}</h2>
+        <p class="bio">{{ bio }}</p>
+        <p>Seguidores: {{ seguidores }}</p>
+        <p>Seguindo: {{ seguindo }}</p>
+        <p>Publicacoes: {{ publicacoes }}</p>
+    </section>
+</body>
+</html>

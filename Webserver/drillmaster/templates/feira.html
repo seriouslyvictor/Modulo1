@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>A feira tem as seguinte frutas:</h1>
+
+<ul>
+    {% for fruta in todas_frutas %}
+    <li>{{fruta}}</li>
+    {% endfor %}
+</ul>
+
+<form action="/feira " method="POST">
+    <label for="fruta">Nome da fruta:<input type="text" name="fruta" id="fruta"></label>
+    <button type="submit">Adicionar a fruta</button>
+</form>
+{% endblock content %}

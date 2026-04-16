@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil com Idade</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="page">
+        <a class="back-link" href="/">Voltar para todos os exercicios</a>
+        <h1>3a - Perfil com Idade</h1>
+
+        <div class="card">
+            <h2>{{ nome }}</h2>
+            <p>Idade: {{ idade }}</p>
+
+            {% if idade < 18 %}
+                <p class="tag warning">Conteudo para menores</p>
+            {% else %}
+                <p class="tag success">Conteudo adulto liberado</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loja</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="page">
+        <a class="back-link" href="/">Voltar para todos os exercicios</a>
+        <h1>4c - Loja</h1>
+
+        {% for produto in produtos %}
+            <div class="card product-row">
+                <h2>{{ produto.nome }}</h2>
+                <p>Preco: {{ produto.preco }}</p>
+
+                {% if produto.em_estoque %}
+                    <p class="tag success">Disponivel</p>
+                {% else %}
+                    <p class="tag danger">Esgotado</p>
+                {% endif %}
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>

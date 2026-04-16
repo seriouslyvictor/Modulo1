@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pix</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="page">
+        <a class="back-link" href="/">Voltar para todos os exercicios</a>
+        <h1>3c - Extrato Pix</h1>
+
+        <div class="card">
+            <ul class="transaction-list">
+                {% for valor in transacoes %}
+                    <li>
+                        {% if valor > 0 %}
+                            <span class="money-in">Recebido: R$ {{ valor }},00</span>
+                        {% else %}
+                            <span class="money-out">Enviado: R$ {{ valor * -1 }},00</span>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
