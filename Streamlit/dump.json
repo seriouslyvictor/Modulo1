@@ -1,0 +1,379 @@
+{
+    "page": 1,
+    "results": [
+        {
+            "adult": false,
+            "backdrop_path": "/tlm8UkiQsitc8rSuIAscQDCnP8d.jpg",
+            "genre_ids": [
+                28,
+                878
+            ],
+            "id": 603,
+            "original_language": "en",
+            "original_title": "The Matrix",
+            "overview": "O jovem programador Thomas Anderson é atormentado por estranhos pesadelos em que está sempre conectado por cabos a um imenso sistema de computadores do futuro. À medida que o sonho se repete, ele começa a desconfiar da realidade. Thomas conhece os misteriosos Morpheus e Trinity e descobre que é vítima de um sistema inteligente e artificial chamado Matrix, que manipula a mente das pessoas e cria a ilusão de um mundo real enquanto usa os cérebros e corpos dos indivíduos para produzir energia.",
+            "popularity": 28.3131,
+            "poster_path": "/lDqMDI3xpbB9UQRyeXfei0MXhqb.jpg",
+            "release_date": "1999-03-31",
+            "title": "Matrix",
+            "video": false,
+            "vote_average": 8.242,
+            "vote_count": 27670
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/ihOJcrorpDQtHTzIOrobbOhpJsj.jpg",
+            "genre_ids": [
+                12,
+                28,
+                53,
+                878
+            ],
+            "id": 604,
+            "original_language": "en",
+            "original_title": "The Matrix Reloaded",
+            "overview": "Após derrotar as máquinas em seu combate inicial, Neo ainda vive na Nabucodonosor ao lado de Morpheus, Trinity e Link, o novo tripulante da nave. As máquinas estão realizando uma grande ofensiva contra Zion, onde 250 mil delas escavam rumo à cidade e podem alcançá-la em poucos dias. A Nabucodonosor é convocada para retornar a Zion e participar da reunião que definirá o contra-ataque para salvar a humanidade da extinção. Entretanto, um recado enviado pelo Oráculo faz com que Neo retorne à Matrix.",
+            "popularity": 11.6492,
+            "poster_path": "/ayZkaN2f3ASjWW8ooCfuJT3T8Va.jpg",
+            "release_date": "2003-05-15",
+            "title": "Matrix Reloaded",
+            "video": false,
+            "vote_average": 7.071,
+            "vote_count": 11847
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/eNI7PtK6DEYgZmHWP9gQNuff8pv.jpg",
+            "genre_ids": [
+                878,
+                28,
+                12
+            ],
+            "id": 624860,
+            "original_language": "en",
+            "original_title": "The Matrix Resurrections",
+            "overview": "Em um mundo de duas realidades — a vida cotidiana e o que está por trás dela —, Thomas Anderson terá que escolher seguir o coelho branco mais uma vez. A escolha, embora seja uma ilusão, ainda é a única maneira de entrar ou sair da Matrix, que é mais forte, mais segura e mais perigosa do que nunca.",
+            "popularity": 12.2236,
+            "poster_path": "/9DT4WVqZqBEI9Kub18gZ3m1D89m.jpg",
+            "release_date": "2021-12-16",
+            "title": "Matrix Resurrections",
+            "video": false,
+            "vote_average": 6.337,
+            "vote_count": 6392
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/kJYPag1YrA4PsXIftFdq3QEaanV.jpg",
+            "genre_ids": [
+                12,
+                28,
+                53,
+                878
+            ],
+            "id": 605,
+            "original_language": "en",
+            "original_title": "The Matrix Revolutions",
+            "overview": "Após enfrentar os sentinelas no mundo real, Neo, a maior esperança da humanidade, está preso entre a Matrix e a realidade. A maioria da população do planeta permanece em um estado de suspensão da realidade virtual. Os poucos humanos que estão cientes das duras realidades tentam desesperadamente afastar as máquinas a tempo de Neo escapar e salvar o dia. Mas as coisas pioram quando o poderoso programa de computador, Agente Smith, aparece na forma humana.",
+            "popularity": 10.7914,
+            "poster_path": "/92oJ810bYqijBQ8tqYL74mSpPtV.jpg",
+            "release_date": "2003-11-05",
+            "title": "Matrix Revolutions",
+            "video": false,
+            "vote_average": 6.748,
+            "vote_count": 10709
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2JCUdkC84MWnRQzOEMDO2i37tZy.jpg",
+            "genre_ids": [
+                16
+            ],
+            "id": 411948,
+            "original_language": "en",
+            "original_title": "Matrix",
+            "overview": "",
+            "popularity": 0.1294,
+            "poster_path": "/wwGvUPEM6MRiXv3gRNaVUlUCHiT.jpg",
+            "release_date": "1971-05-18",
+            "title": "Matrix",
+            "video": false,
+            "vote_average": 7.3,
+            "vote_count": 3
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 373223,
+            "original_language": "en",
+            "original_title": "Matrix",
+            "overview": "",
+            "popularity": 0.0571,
+            "poster_path": "/wx2s9xYeC6uP2auuuVg99yl4RpU.jpg",
+            "release_date": "1973-09-06",
+            "title": "Matrix",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 22
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 775293,
+            "original_language": "en",
+            "original_title": "Matrix",
+            "overview": "",
+            "popularity": 0.1128,
+            "poster_path": "/frDqG8rmqKUg4HzQ604LZo8VLHB.jpg",
+            "release_date": "1973-01-01",
+            "title": "Matrix",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 25
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [],
+            "id": 555879,
+            "original_language": "en",
+            "original_title": "Matrix",
+            "overview": "",
+            "popularity": 0.1283,
+            "poster_path": "/AfFD10ZqEx2vkxM2yvRZkybsGB7.jpg",
+            "release_date": "1998-12-31",
+            "title": "Matrix",
+            "video": false,
+            "vote_average": 7.1,
+            "vote_count": 51
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/t6qYLZStr1wBxsUb9O9dTpbtOm6.jpg",
+            "genre_ids": [
+                53,
+                28,
+                16,
+                878,
+                12
+            ],
+            "id": 21769,
+            "original_language": "ja",
+            "original_title": "アミテージ・ザ・サード DUAL-MATRIX",
+            "overview": "Alguns anos depois de se conhecerem, Naomi Armitage e Ross Syllabus começaram uma família. Apesar de suas vidas normais, eles devem manter suas identidades em segredo porque muitas pessoas acreditam que os robôs não merecem status igual com os seres humanos. Ross tem uma oportunidade para abolir essas idéias na Terra através de uma votação, mas as organizações nas sombras estão trabalhando para que isso não aconteça.",
+            "popularity": 0.6524,
+            "poster_path": "/kIokBz6IlEP6hOGsE2OEKmMp8tu.jpg",
+            "release_date": "2002-03-22",
+            "title": "Armitage III: Dual-Matrix",
+            "video": false,
+            "vote_average": 6.3,
+            "vote_count": 57
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/sxuGFodklW2heRH5lx6AlP0R75E.jpg",
+            "genre_ids": [
+                16,
+                878,
+                53
+            ],
+            "id": 33322,
+            "original_language": "ja",
+            "original_title": "アミテージ・ザ・サード POLY-MATRIX",
+            "overview": "No ano 2046 os seres humanos estão se afastando de usar robôs e começam a confiar cada vez menos neles. Neste tempo, a vida se torna muito perigosa para os seres conhecidos como segundos. Os segundos são a linha mais recente de robôs, até onde o público sabe. Esse é o mundo em que o detetive Ross Sylibus vive. O detetive Sylibus é transferido para Marte por seu pedido depois que seu parceiro foi morto por um robô. À medida que ele chega, ele cai de cabeça num assassinato onde um cantor de país em seu vôo foi assassinado. Ele sai do avião e observa enquanto uma cena se desenrola e ele encontra seu parceiro, Armitage, uma policial com uma atitude importante. Uma série de assassinatos começa quando ainda mais mulheres são mortas. Como a investigação é continuada um segredo é descoberto. Existe outra linha de robôs conhecida como Terços. Mais e mais Terceiros aparecem desaparecidos, como um assassino em série que tem a intenção de aniquilar todos os Terços corre desenfreado.",
+            "popularity": 0.8952,
+            "poster_path": "/7sUCRdjGe7VggDCGIHywfguYdAK.jpg",
+            "release_date": "1996-06-25",
+            "title": "Armitage III: Poly-Matrix",
+            "video": false,
+            "vote_average": 6.4,
+            "vote_count": 68
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/lBdXACywnLwKUZmZkZ87djDQBeV.jpg",
+            "genre_ids": [
+                99
+            ],
+            "id": 14543,
+            "original_language": "en",
+            "original_title": "The Matrix Revisited",
+            "overview": "O documentário apresenta detalhes e curiosidades sobre a produção original e toda a trajetória de preparação para as filmagens. É mostrada a coleta de informações pelos diretores Larry e Andrew Wachowski sobre filosofia oriental e a natureza da realidade. Curiosidades como os diversos livros que Keanu Reeves teve de ler antes de conhecer o roteiro, além da influência de Hong Konge das lutas de kung-Fu sobre o filme são explicadas por meio de comentários da equipe e do elenco. Todos os mecanismos e táticas para a realização do filme são revelados no documentário. Vale dizer que a obra está dividida em tópicos para que os mistérios sejam esclarecidos: as locações dos sets na Austrália; o estilo visual; os figurinos; a criação dos efeitos especiais; o treinamento dos atores.",
+            "popularity": 1.0622,
+            "poster_path": "/oNZK87GPiBPYfQnDJapungYlRyQ.jpg",
+            "release_date": "2001-11-19",
+            "title": "Matrix – Os Segredos de Produção",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 204
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/2P3FyI9ZTe9duRIGpGPiDC3mQMf.jpg",
+            "genre_ids": [
+                99,
+                10770
+            ],
+            "id": 1217455,
+            "original_language": "fr",
+            "original_title": "Matrix génération",
+            "overview": "",
+            "popularity": 0.718,
+            "poster_path": "/jSmzYl9PQLZu4ZnumDBHNRGLF4s.jpg",
+            "release_date": "2023-12-13",
+            "title": "Matrix génération",
+            "video": false,
+            "vote_average": 6.9,
+            "vote_count": 23
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                99
+            ],
+            "id": 684721,
+            "original_language": "en",
+            "original_title": "The Matrix Revolutions: Super Big Mini Models",
+            "overview": "",
+            "popularity": 0.2828,
+            "poster_path": "/aFSXTzdOYevM3jytFNySwvzYE9q.jpg",
+            "release_date": "2004-04-06",
+            "title": "The Matrix Revolutions: Super Big Mini Models",
+            "video": false,
+            "vote_average": 6.9,
+            "vote_count": 4
+        },
+        {
+            "adult": false,
+            "backdrop_path": "/eCJ7a1ndfdkfkziDAA2OvOsNbsz.jpg",
+            "genre_ids": [
+                35
+            ],
+            "id": 141225,
+            "original_language": "hu",
+            "original_title": "Buhera mátrix",
+            "overview": "",
+            "popularity": 0.1557,
+            "poster_path": "/mSA91zntAssOuzGiakE3foA1MM0.jpg",
+            "release_date": "2007-03-29",
+            "title": "Buhera mátrix",
+            "video": false,
+            "vote_average": 4.8,
+            "vote_count": 3
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                99
+            ],
+            "id": 684709,
+            "original_language": "en",
+            "original_title": "Mind Over Matter: The Physicality of the Matrix Future",
+            "overview": "",
+            "popularity": 0.3023,
+            "poster_path": null,
+            "release_date": "2004-04-06",
+            "title": "Mind Over Matter: The Physicality of the Matrix Future",
+            "video": false,
+            "vote_average": 6.8,
+            "vote_count": 8
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                878,
+                10749
+            ],
+            "id": 51767,
+            "original_language": "en",
+            "original_title": "Sexual Matrix",
+            "overview": "Uma pacata cidade universitária se envolve em polêmica quando a invenção de software de um professor, o Cybertron, aumenta o desejo sexual dos professores e alunos da universidade, permitindo que eles libertem suas fantasias mais íntimas em um mundo virtual.",
+            "popularity": 0.8522,
+            "poster_path": "/vmhBIPKyYCWlp2PrIIc6EXZlP9Z.jpg",
+            "release_date": "2000-04-01",
+            "title": "Sexual Matrix",
+            "video": false,
+            "vote_average": 6.3,
+            "vote_count": 22
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                99
+            ],
+            "id": 684731,
+            "original_language": "en",
+            "original_title": "The Matrix Reloaded: Pre-Load",
+            "overview": "",
+            "popularity": 0.6798,
+            "poster_path": null,
+            "release_date": "2003-10-14",
+            "title": "The Matrix Reloaded: Pre-Load",
+            "video": false,
+            "vote_average": 6.1,
+            "vote_count": 21
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                99
+            ],
+            "id": 174615,
+            "original_language": "en",
+            "original_title": "Return to Source: The Philosophy of The Matrix",
+            "overview": "",
+            "popularity": 0.4779,
+            "poster_path": "/8y6mcZbXxL0IIV4GJJ4whLwApow.jpg",
+            "release_date": "2004-12-07",
+            "title": "Return to Source: The Philosophy of The Matrix",
+            "video": false,
+            "vote_average": 7.2,
+            "vote_count": 16
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                99,
+                878
+            ],
+            "id": 221495,
+            "original_language": "en",
+            "original_title": "The Matrix Recalibrated",
+            "overview": "",
+            "popularity": 0.8572,
+            "poster_path": "/gRni1Q651AZPnLqZczmahiIxG0s.jpg",
+            "release_date": "2004-04-06",
+            "title": "The Matrix Recalibrated",
+            "video": true,
+            "vote_average": 6.8,
+            "vote_count": 53
+        },
+        {
+            "adult": false,
+            "backdrop_path": null,
+            "genre_ids": [
+                99
+            ],
+            "id": 591955,
+            "original_language": "en",
+            "original_title": "The Matrix Reloaded Revisited",
+            "overview": "",
+            "popularity": 0.5288,
+            "poster_path": "/gb7C4oRzYWXWCuZMR1cwtHa53Pz.jpg",
+            "release_date": "2004-12-07",
+            "title": "The Matrix Reloaded Revisited",
+            "video": true,
+            "vote_average": 6.7,
+            "vote_count": 28
+        }
+    ],
+    "total_pages": 5,
+    "total_results": 90
+}
