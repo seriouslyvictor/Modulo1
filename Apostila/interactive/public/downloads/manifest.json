@@ -1,0 +1,142 @@
+{
+  "version": 1,
+  "chapters": [
+    {
+      "chapterNumber": 1,
+      "chapterFolder": "01_primeiros_passos",
+      "zipFilename": "capitulo-01-starter.zip",
+      "includedFiles": [
+        "mensagem_com_erro.py",
+        "README.md",
+        "verificar_ambiente.py"
+      ]
+    },
+    {
+      "chapterNumber": 2,
+      "chapterFolder": "02_variaveis_e_entrada",
+      "zipFilename": "capitulo-02-starter.zip",
+      "includedFiles": [
+        "ficha_base.py",
+        "nome_incorreto.py",
+        "README.md",
+        "verificar_capitulo.py"
+      ]
+    },
+    {
+      "chapterNumber": 3,
+      "chapterFolder": "03_tipos_e_calculos",
+      "zipFilename": "capitulo-03-starter.zip",
+      "includedFiles": [
+        "calculadora_base.py",
+        "README.md",
+        "soma_textual.py",
+        "verificar_capitulo.py"
+      ]
+    },
+    {
+      "chapterNumber": 4,
+      "chapterFolder": "04_condicionais_e_validacao",
+      "zipFilename": "capitulo-04-starter.zip",
+      "includedFiles": [
+        "classificacao_incorreta.py",
+        "README.md",
+        "validador_base.py",
+        "verificar_capitulo.py"
+      ]
+    },
+    {
+      "chapterNumber": 5,
+      "chapterFolder": "05_listas_e_colecoes",
+      "zipFilename": "capitulo-05-starter.zip",
+      "includedFiles": [
+        "indice_incorreto.py",
+        "lista_base.py",
+        "README.md",
+        "verificar_capitulo.py"
+      ]
+    },
+    {
+      "chapterNumber": 6,
+      "chapterFolder": "06_lacos_e_processamento",
+      "zipFilename": "capitulo-06-starter.zip",
+      "includedFiles": [
+        "acumulador_incorreto.py",
+        "README.md",
+        "relatorio_base.py",
+        "verificar_capitulo.py"
+      ]
+    },
+    {
+      "chapterNumber": 7,
+      "chapterFolder": "07_funcoes_e_decomposicao",
+      "zipFilename": "capitulo-07-starter.zip",
+      "includedFiles": [
+        "funcoes_base.py",
+        "README.md",
+        "retorno_incorreto.py",
+        "verificar_capitulo.py"
+      ]
+    },
+    {
+      "chapterNumber": 8,
+      "chapterFolder": "08_dicionarios_e_registros",
+      "zipFilename": "capitulo-08-starter.zip",
+      "includedFiles": [
+        "chave_inexistente.py",
+        "produto_base.py",
+        "README.md",
+        "verificar_capitulo.py"
+      ]
+    },
+    {
+      "chapterNumber": 9,
+      "chapterFolder": "09_modulos_e_organizacao",
+      "zipFilename": "capitulo-09-starter.zip",
+      "includedFiles": [
+        "app_base.py",
+        "importar_efeito.py",
+        "modulo_com_efeito.py",
+        "README.md",
+        "regras_estoque.py",
+        "verificar_capitulo.py"
+      ]
+    },
+    {
+      "chapterNumber": 10,
+      "chapterFolder": "10_arquivos_e_json",
+      "zipFilename": "capitulo-10-starter.zip",
+      "includedFiles": [
+        "catalogo_base.py",
+        "modo_incorreto.py",
+        "produtos.json",
+        "rascunho.txt",
+        "README.md",
+        "verificar_capitulo.py"
+      ]
+    },
+    {
+      "chapterNumber": 11,
+      "chapterFolder": "11_excecoes_e_depuracao",
+      "zipFilename": "capitulo-11-starter.zip",
+      "includedFiles": [
+        "captura_ampla.py",
+        "catalogo_base.py",
+        "produtos_corrompidos.json",
+        "produtos_validos.json",
+        "README.md",
+        "verificar_capitulo.py"
+      ]
+    },
+    {
+      "chapterNumber": 12,
+      "chapterFolder": "12_objetos_estado_comportamento",
+      "zipFilename": "capitulo-12-starter.zip",
+      "includedFiles": [
+        "produto_base.py",
+        "README.md",
+        "self_incorreto.py",
+        "verificar_capitulo.py"
+      ]
+    }
+  ]
+}

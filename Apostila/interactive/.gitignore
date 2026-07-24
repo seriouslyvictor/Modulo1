@@ -1,0 +1,9 @@
+node_modules/
+dist/
+
+# Local visual QA evidence
+implementation-*.png
+design-qa-comparison-*.png
+
+# Local packaging artifacts
+*.tar.gz
