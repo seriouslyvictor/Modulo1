@@ -122,7 +122,6 @@ No laboratório institucional, Python e VS Code já estarão instalados. O Capí
 - `str`, `int`, `float` e `bool`;
 - `type()`;
 - conversões com `str()`, `int()`, `float()` e `bool()`;
-- indexação básica de strings;
 - operadores aritméticos;
 - divisão comum e divisão inteira;
 - resto da divisão;
