@@ -1,0 +1,15 @@
+[
+  {
+    "nome": "Caderno",
+    "categoria": "Papelaria",
+    "preco": 8.5,
+    "quantidade": 10
+  },
+  {
+    "nome": "Caneta",
+    "categoria": "Papelaria",
+    "preco": 3.2,
+    "quantidade": 5
+  }
+]
+

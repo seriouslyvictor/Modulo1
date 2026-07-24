@@ -1,0 +1,2 @@
+Conteúdo usado apenas na oficina de depuração.
+
