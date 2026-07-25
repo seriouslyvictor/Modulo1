@@ -571,11 +571,76 @@ button {
 
 .callout > svg {
   margin-top: 2px;
-  color: var(--color-accent);
+  color: var(--callout-accent, var(--color-accent));
 }
 
 .callout p:last-child {
   margin-bottom: 0;
+}
+
+/* Variantes das caixas didáticas (Atenção, Dica, Erro comum, etc.). */
+.callout-warning {
+  border-color: #e6cd88;
+  background: #fdf6e3;
+  --callout-accent: #ad7d17;
+}
+
+.callout-error {
+  border-color: #e8b3a7;
+  background: #fbeae5;
+  --callout-accent: #bd4329;
+}
+
+.callout-tip {
+  border-color: #bbdcc0;
+  background: #eef8ef;
+  --callout-accent: #2c8a4a;
+}
+
+.callout-think {
+  border-color: #c5d0ee;
+  background: #eef1fb;
+  --callout-accent: #3a56b8;
+}
+
+.callout-security {
+  border-color: #bdd4c9;
+  background: #edf5f0;
+  --callout-accent: #2c7a5f;
+}
+
+.callout-pause {
+  border-color: #d8ccbc;
+  background: #f5efe7;
+  --callout-accent: #86673d;
+}
+
+.callout-figure {
+  border-color: #cfcbe0;
+  background: #f1f0f8;
+  --callout-accent: #5a53a6;
+}
+
+/* Estado intencional de "prévia": só parte dos capítulos está publicada. */
+.preview-note {
+  margin: 4px 0 0;
+  padding: 10px 12px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-control);
+  color: var(--color-muted);
+  font-size: 12.5px;
+  line-height: 1.5;
+}
+
+.preview-end-note {
+  margin: 18px 0 0;
+  padding: 14px 16px;
+  border: 1px dashed var(--color-border);
+  border-radius: var(--radius-control);
+  background: var(--color-surface-warm);
+  color: var(--color-muted);
+  font-size: 13.5px;
+  line-height: 1.55;
 }
 
 .table-scroll {

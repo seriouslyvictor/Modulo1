@@ -91,3 +91,51 @@ export const chapters: Chapter[] = [
 export function getChapter(number: number) {
   return chapters.find((chapter) => chapter.number === number) ?? chapters[0];
 }
+
+// O curso completo tem 15 capítulos (ver Apostila/PLANO_CONTEUDO.md).
+// Esta versão interativa entrega os capítulos disponíveis abaixo; os demais
+// estão em produção. A interface reflete esse estado de forma intencional.
+export const TOTAL_COURSE_CHAPTERS = 15;
+
+const plannedTitles: Record<number, string> = {
+  1: "Primeiros passos",
+  2: "Variáveis, textos, entrada e saída",
+  3: "Tipos de dados, conversões e cálculos",
+  4: "Decisões e regras de validação",
+  5: "Listas e coleções ordenadas",
+  6: "Laços e processamento repetido",
+  7: "Funções e decomposição de problemas",
+  8: "Dicionários e registros estruturados",
+  9: "Módulos e organização em arquivos",
+  10: "Arquivos de texto e JSON",
+  11: "Validação, exceções e depuração",
+  12: "Objetos: dados e comportamento",
+  13: "Organizando uma aplicação com objetos",
+  14: "Construindo uma interface com Streamlit",
+  15: "Concluir e publicar a aplicação",
+};
+
+export type OutlineEntry = {
+  number: number;
+  shortTitle: string;
+  available: boolean;
+};
+
+export const courseOutline: OutlineEntry[] = Array.from(
+  { length: TOTAL_COURSE_CHAPTERS },
+  (_, index) => {
+    const number = index + 1;
+    const built = chapters.find((chapter) => chapter.number === number);
+    return {
+      number,
+      shortTitle: built?.shortTitle ?? plannedTitles[number] ?? `Capítulo ${number}`,
+      available: Boolean(built),
+    };
+  },
+);
+
+export function isChapterAvailable(number: number) {
+  return chapters.some((chapter) => chapter.number === number);
+}
+
+export const lastAvailableChapter = chapters[chapters.length - 1].number;

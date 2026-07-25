@@ -2,6 +2,7 @@ import {
   ArrowLeft,
   ArrowRight,
   BookOpenText,
+  Brain,
   Bug,
   CaretDown,
   CaretRight,
@@ -9,17 +10,23 @@ import {
   CheckCircle,
   Circle,
   CloudCheck,
+  Coffee,
   Copy,
   DownloadSimple,
   FileZip,
+  Image as ImageIcon,
   Keyboard,
   Lifebuoy,
+  Lightbulb,
   List,
+  ShieldCheck,
+  WarningCircle,
   X,
 } from "@phosphor-icons/react";
 import {
   Children,
-  type HTMLAttributes,
+  type ComponentType,
+  isValidElement,
   type ReactNode,
   useEffect,
   useMemo,
@@ -28,7 +35,14 @@ import {
 import Markdown from "react-markdown";
 import rehypeRaw from "rehype-raw";
 import remarkGfm from "remark-gfm";
-import { chapters, getChapter, type LessonSection } from "./content";
+import {
+  chapters,
+  courseOutline,
+  getChapter,
+  lastAvailableChapter,
+  type LessonSection,
+  TOTAL_COURSE_CHAPTERS,
+} from "./content";
 
 const STORAGE_KEY = "apostila-python-progress-v1";
 
@@ -155,6 +169,19 @@ function useCourseRoute() {
   return { route, navigate };
 }
 
+// Rótulo por linguagem da cerca de código. Blocos que o estudante digita ou
+// reaproveita (Python, terminal, JSON) mostram "Copiar"; blocos de saída ou
+// diagramas (```text```) são apenas leitura e não convidam à cópia.
+const CODE_LABELS: Record<string, string> = {
+  python: "Python",
+  powershell: "Terminal",
+  bash: "Terminal",
+  console: "Terminal",
+  json: "JSON",
+  text: "Saída",
+};
+const COPYABLE_LANGUAGES = new Set(["python", "powershell", "bash", "console", "json"]);
+
 function CodeBlock({
   children,
 }: {
@@ -165,7 +192,9 @@ function CodeBlock({
     | undefined;
   const code = String(child?.props?.children ?? "").replace(/\n$/, "");
   const language =
-    child?.props?.className?.replace("language-", "") ?? "texto";
+    child?.props?.className?.replace("language-", "") ?? "text";
+  const label = CODE_LABELS[language] ?? "Saída";
+  const canCopy = COPYABLE_LANGUAGES.has(language);
   const [copied, setCopied] = useState(false);
 
   async function copyCode() {
@@ -177,17 +206,74 @@ function CodeBlock({
   return (
     <div className="code-block">
       <div className="code-toolbar">
-        <span>{language === "python" ? "Python" : "Saída"}</span>
-        <button type="button" onClick={copyCode} aria-live="polite">
-          {copied ? <Check size={17} /> : <Copy size={17} />}
-          {copied ? "Copiado" : "Copiar código"}
-        </button>
+        <span>{label}</span>
+        {canCopy ? (
+          <button type="button" onClick={copyCode} aria-live="polite">
+            {copied ? <Check size={17} /> : <Copy size={17} />}
+            {copied ? "Copiado" : "Copiar"}
+          </button>
+        ) : null}
       </div>
       <pre>
         <code>{code}</code>
       </pre>
     </div>
   );
+}
+
+// Caixas didáticas: o texto (PLANO_CONTEUDO.md §5) usa rótulos em negrito
+// distintos. Detectamos o rótulo para dar ícone e cor próprios a cada tipo,
+// em vez de achatar tudo em um único estilo.
+type CalloutVariant = { name: string; Icon: ComponentType<{ size?: number; weight?: "duotone"; "aria-hidden"?: boolean }> };
+
+const CALLOUT_VARIANTS: Record<string, CalloutVariant> = {
+  atencao: { name: "warning", Icon: WarningCircle },
+  "erro comum": { name: "error", Icon: Bug },
+  dica: { name: "tip", Icon: Lightbulb },
+  "teste mental": { name: "think", Icon: Brain },
+  seguranca: { name: "security", Icon: ShieldCheck },
+  "pausa sugerida": { name: "pause", Icon: Coffee },
+  "figura em producao": { name: "figure", Icon: ImageIcon },
+};
+const DEFAULT_CALLOUT: CalloutVariant = { name: "note", Icon: BookOpenText };
+
+function normalizeLabel(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/[̀-ͯ]/g, "")
+    .toLowerCase()
+    .replace(/[^a-z ]/g, "")
+    .trim();
+}
+
+function firstStrongText(children: ReactNode): string | null {
+  let result: string | null = null;
+  Children.forEach(children, (child) => {
+    if (result || !isValidElement(child)) return;
+    const el = child as { type: unknown; props?: { children?: ReactNode } };
+    if (el.type === "strong") {
+      result = collectText(el.props?.children);
+      return;
+    }
+    const nested = firstStrongText(el.props?.children);
+    if (nested) result = nested;
+  });
+  return result;
+}
+
+function collectText(node: ReactNode): string {
+  if (typeof node === "string" || typeof node === "number") return String(node);
+  if (Array.isArray(node)) return node.map(collectText).join("");
+  if (isValidElement(node)) {
+    return collectText((node as { props?: { children?: ReactNode } }).props?.children);
+  }
+  return "";
+}
+
+function calloutVariantFor(children: ReactNode): CalloutVariant {
+  const label = firstStrongText(children);
+  if (!label) return DEFAULT_CALLOUT;
+  return CALLOUT_VARIANTS[normalizeLabel(label)] ?? DEFAULT_CALLOUT;
 }
 
 function LessonMarkdown({ markdown }: { markdown: string }) {
@@ -205,9 +291,11 @@ function LessonMarkdown({ markdown }: { markdown: string }) {
           );
         },
         blockquote({ children }) {
+          const variant = calloutVariantFor(children);
+          const Icon = variant.Icon;
           return (
-            <aside className="callout">
-              <BookOpenText size={21} weight="duotone" aria-hidden="true" />
+            <aside className={`callout callout-${variant.name}`}>
+              <Icon size={21} weight="duotone" aria-hidden="true" />
               <div>{children}</div>
             </aside>
           );
@@ -394,7 +482,9 @@ function ChapterRail({
       <aside className={`chapter-rail ${isOpen ? "is-open" : ""}`}>
         <div className="rail-heading">
           <div className="eyebrow-row">
-            <span>Capítulo {chapter.number} de 15</span>
+            <span>
+              Capítulo {chapter.number} de {TOTAL_COURSE_CHAPTERS}
+            </span>
             <button
               className="icon-button rail-close"
               type="button"
@@ -433,13 +523,23 @@ function ChapterRail({
               onClose();
             }}
           >
-            {chapters.map((item) => (
-              <option value={item.number} key={item.number}>
+            {courseOutline.map((item) => (
+              <option
+                value={item.number}
+                key={item.number}
+                disabled={!item.available}
+              >
                 {item.number}. {item.shortTitle}
+                {item.available ? "" : " (em produção)"}
               </option>
             ))}
           </select>
         </label>
+
+        <p className="preview-note">
+          Prévia do curso: capítulos 1 a {lastAvailableChapter} disponíveis.
+          Os demais estão em produção.
+        </p>
 
         <nav className="section-list" aria-label="Seções do capítulo">
           {stageDefinitions.map((stage) => {
@@ -809,7 +909,7 @@ export function App() {
         </button>
         <div>
           <span>
-            Capítulo {chapter.number} de 15
+            Capítulo {chapter.number} de {TOTAL_COURSE_CHAPTERS}
           </span>
           <strong>{chapter.shortTitle}</strong>
         </div>
@@ -893,13 +993,25 @@ export function App() {
                 disabled={isComplete}
               >
                 <span>
-                  <small>Finalizar validação</small>
-                  {isComplete ? "Capítulos 1–3 concluídos" : "Concluir capítulo 3"}
+                  <small>
+                    {isComplete ? "Fim da prévia" : "Concluir seção"}
+                  </small>
+                  {isComplete
+                    ? `Capítulos 1 a ${lastAvailableChapter} concluídos`
+                    : "Concluir e finalizar a prévia"}
                 </span>
                 <CheckCircle size={21} weight="bold" />
               </button>
             )}
           </footer>
+
+          {!next ? (
+            <p className="preview-end-note">
+              Você chegou ao fim do conteúdo disponível nesta prévia. Os
+              capítulos {lastAvailableChapter + 1} a {TOTAL_COURSE_CHAPTERS}{" "}
+              ainda estão em produção.
+            </p>
+          ) : null}
         </article>
       </main>
 
