@@ -16,7 +16,7 @@ Dicionários organizam valores por chaves descritivas. Neste encontro, cada prod
 
 ## Antes de começar
 
-Este capítulo é autocontido. Copie os arquivos de `starter/`.
+Este capítulo é autocontido. Copie os arquivos de `starter/` e abra a cópia no VS Code.
 
 ```text
 starter/
@@ -28,7 +28,15 @@ starter/
 
 Você precisa reconhecer listas, laços, condicionais e funções simples.
 
+Execute `python verificar_capitulo.py`. A saída esperada é:
+
+```text
+Ambiente pronto para o Capítulo 8.
+```
+
 ## Objetivos de aprendizagem
+
+Ao concluir este capítulo, você deverá conseguir:
 
 - criar dicionários;
 - acessar, adicionar e alterar pares chave–valor;
@@ -54,11 +62,34 @@ produto = {
 
 Cada par possui uma chave e um valor. As chaves acima são strings; os valores têm tipos diferentes porque representam campos diferentes do mesmo produto.
 
+## Lista ou dicionário?
+
+Use uma lista quando os valores têm o mesmo papel e a ordem importa:
+
+```python
+categorias = ["Papelaria", "Higiene", "Alimentos"]
+```
+
+Use um dicionário quando cada valor representa um campo nomeado de uma entidade:
+
+```python
+produto = {"nome": "Caderno", "preco": 8.50}
+```
+
+Para representar vários produtos, combine as duas estruturas: uma lista guarda os produtos, e cada produto é um dicionário.
+
 ## Acessando e alterando
 
 ```python
 print(produto["nome"])
 print(produto["quantidade"])
+```
+
+Saída:
+
+```text
+Caderno
+12
 ```
 
 Para alterar:
@@ -89,6 +120,12 @@ if "categoria" in produto:
 ```python
 localizacao = produto.get("localizacao", "Não informada")
 print(localizacao)
+```
+
+Saída:
+
+```text
+Não informada
 ```
 
 Se a chave não existir, o programa recebe `"Não informada"` em vez de produzir `KeyError`.
@@ -195,6 +232,16 @@ Abra `starter/produto_base.py`.
 
 Depois, acrescente um dicionário aninhado `fornecedor` com nome e cidade.
 
+### Checklist
+
+- [ ] O nome e a quantidade aparecem antes das alterações.
+- [ ] A quantidade foi alterada para `15`.
+- [ ] Categoria e localização foram adicionadas.
+- [ ] `get()` mostrou `Não informado` antes da inclusão do fornecedor.
+- [ ] O laço com `items()` exibiu todos os pares.
+- [ ] O valor do estoque foi calculado com preço e quantidade.
+- [ ] A cidade do fornecedor aninhado foi acessada.
+
 > **Pausa sugerida:** este é um bom ponto para o intervalo.
 
 ## Oficina de depuração — Chave inexistente
@@ -207,6 +254,8 @@ print(produto["categoria"])
 ```
 
 O acesso produz `KeyError: 'categoria'`.
+
+Execute o programa uma vez e leia a última linha do traceback antes de alterar o código.
 
 Investigue:
 
@@ -247,6 +296,18 @@ produtos = [
 ]
 ```
 
+### Testes mínimos
+
+Com os dados sugeridos, confirme:
+
+| Verificação | Resultado esperado |
+|---|---|
+| `Caneta` | esgotado |
+| `Sabonete` | crítico |
+| `Caderno` e `Café` | adequado |
+| Valor total do catálogo | `R$ 201.00` |
+| Produtos para reposição | `2` |
+
 <details>
 <summary>Pista</summary>
 
@@ -278,6 +339,13 @@ Dentro do `for`, use `produto["campo"]`. Crie acumuladores antes do laço.
 ## Tarefa de saída
 
 Crie um dicionário para um produto com nome, preço e quantidade. Adicione categoria, altere quantidade, calcule o valor total e percorra os pares com `items()`.
+
+### Critérios
+
+- [ ] O dicionário possui os quatro campos pedidos.
+- [ ] A nova quantidade aparece no cálculo.
+- [ ] O laço exibe cada chave junto com seu valor.
+- [ ] Consigo explicar quando usaria uma lista em vez de um dicionário.
 
 ## Vocabulário
 

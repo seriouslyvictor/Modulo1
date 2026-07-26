@@ -16,7 +16,7 @@ Objetos permitem agrupar o estado de um produto e os comportamentos que operam s
 
 ## Antes de começar
 
-Copie `starter/` e abra a cópia no VS Code.
+Este capítulo é autocontido. Baixe e extraia o pacote inicial desta seção. Se estiver usando a pasta completa da apostila, copie `starter/`. Abra a cópia no VS Code.
 
 ```text
 starter/
@@ -28,7 +28,15 @@ starter/
 
 Você precisa saber usar funções, validação com `raise`, dicionários e f-strings.
 
+Execute `python verificar_capitulo.py`. A saída esperada é:
+
+```text
+Ambiente pronto para o Capítulo 12.
+```
+
 ## Objetivos de aprendizagem
+
+Ao concluir este capítulo, você deverá conseguir:
 
 - explicar classe e instância;
 - criar objetos;
@@ -39,6 +47,20 @@ Você precisa saber usar funções, validação com `raise`, dicionários e f-st
 - criar várias instâncias independentes;
 - personalizar apresentação com `__str__()`;
 - reconhecer erros causados pela ausência de `self`.
+
+## Situação-problema
+
+Um produto pode ser guardado em um dicionário, mas as regras para calcular seu valor e alterar seu estoque ficam em funções separadas. Conforme o programa cresce, é preciso lembrar quais funções operam sobre o registro e quais chaves elas esperam.
+
+Neste capítulo, cada produto reunirá seus próprios dados e as operações permitidas sobre eles:
+
+```text
+Produto
+├── estado: nome, preço, quantidade e estoque mínimo
+└── comportamento: calcular, classificar, adicionar e remover
+```
+
+O objetivo é coordenar dados e regras relacionadas. Não vamos trabalhar com herança, composição ou atributos de classe.
 
 ## Do registro ao objeto
 
@@ -263,7 +285,7 @@ O objetivo não é transformar todo atributo em formalidade. Validamos regras qu
 
 ## Prática acompanhada — Classe `Produto`
 
-Abra `starter/produto_base.py` e implemente:
+Abra `starter/produto_base.py`. Implemente um método por vez e execute o arquivo depois de cada checkpoint:
 
 1. `__init__` com nome, preço, quantidade e estoque mínimo;
 2. validações de criação;
@@ -276,6 +298,24 @@ Abra `starter/produto_base.py` e implemente:
 9. operações que mostrem independência entre elas.
 
 Teste também uma remoção maior que o estoque dentro de `try` / `except ValueError`.
+
+### Checkpoints
+
+| Depois de implementar | Verificação |
+|---|---|
+| `__init__` | Duas instâncias guardam nomes e quantidades diferentes. |
+| `valor_estoque()` | Um produto com preço `8.50` e quantidade `10` retorna `85.0`. |
+| `classificar_estoque()` | Quantidade `0` é `esgotado`; quantidade menor ou igual ao mínimo é `crítico`. |
+| Métodos de estoque | Alterar uma instância não muda a outra. |
+| `__str__()` | `print(produto)` mostra nome, quantidade e preço legíveis. |
+| Validações | Uma remoção acima do estoque produz `ValueError` e não altera a quantidade. |
+
+Antes de seguir, confirme:
+
+- [ ] todos os métodos de instância recebem `self` primeiro;
+- [ ] cada validação acontece antes da alteração;
+- [ ] os métodos de cálculo e classificação usam `return`;
+- [ ] as duas instâncias mantêm estados independentes.
 
 > **Pausa sugerida:** este é um bom ponto para o intervalo.
 
@@ -294,6 +334,8 @@ class Produto:
 caderno = Produto("Caderno", 8.50, 10)
 ```
 
+Execute o arquivo antes de alterá-lo. A última linha do traceback deve indicar um `TypeError`. O texto exato pode variar conforme a versão do Python.
+
 A primeira posição de um método de instância recebe o próprio objeto automaticamente. Nesse código, o parâmetro chamado `nome` ocupa essa posição, e a chamada ainda fornece três argumentos; por isso, quatro valores tentam ocupar apenas três parâmetros e ocorre `TypeError`.
 
 `self` não é uma palavra reservada de Python, mas é a convenção usada universalmente e será obrigatória neste curso. O defeito não ocorre porque Python procura o nome `self`; ocorre porque falta um parâmetro para receber a instância antes de `nome`, `preco` e `quantidade`.
@@ -305,7 +347,15 @@ Investigue:
 3. Qual deve ser o primeiro parâmetro de um método de instância?
 4. Como diferenciar `self.nome` do parâmetro `nome`?
 
+Corrija somente a assinatura e as atribuições do `__init__`. Ao final, `print(caderno.nome)` deve exibir `Caderno`.
+
 ## Exercício independente — Produto controlado
+
+### Contexto
+
+Você vai criar três produtos de um pequeno estoque. Cada objeto deverá proteger suas próprias alterações, sem depender de funções externas para receber o produto como argumento.
+
+### Requisitos
 
 Crie `produto_controlado.py` com uma classe `Produto` que:
 
@@ -318,6 +368,23 @@ Crie `produto_controlado.py` com uma classe `Produto` que:
 Crie três produtos, altere dois deles e prove que os estados são independentes. Capture uma tentativa inválida com `except ValueError`.
 
 Não use herança, atributos de classe, `@classmethod`, composição ou inteligência artificial.
+
+### Testes mínimos
+
+| Ação | Resultado esperado |
+|---|---|
+| Criar produto com preço `0` | `ValueError` |
+| Adicionar `2` a uma quantidade `10` | Quantidade final `12` |
+| Remover `1` de uma quantidade `2` | Quantidade final `1` |
+| Remover `1` de uma quantidade `0` | `ValueError` e quantidade continua `0` |
+| Alterar o primeiro produto | Os demais produtos não mudam |
+
+<details>
+<summary>Mostrar pista</summary>
+
+Comece pelo `__init__` e por `__str__()`. Em seguida, implemente um método de consulta por vez. Deixe os métodos que alteram a quantidade por último e valide antes de usar `+=` ou `-=`.
+
+</details>
 
 ## Resumo do capítulo
 
@@ -343,6 +410,8 @@ Não use herança, atributos de classe, `@classmethod`, composição ou intelig�
 ## Tarefa de saída
 
 Crie uma classe `Categoria` com atributo `nome`, método `renomear(novo_nome)` que rejeita string vazia e `__str__()` que retorna o nome. Crie duas instâncias e altere apenas uma.
+
+Conclua quando as duas categorias forem exibidas com nomes diferentes e uma tentativa de renomear com `""` produzir `ValueError` sem apagar o nome anterior.
 
 ## Vocabulário
 

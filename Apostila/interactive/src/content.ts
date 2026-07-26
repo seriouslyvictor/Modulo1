@@ -3,6 +3,13 @@ import chapter02Raw from "../../02_variaveis_e_entrada/capitulo.md?raw";
 import chapter03Raw from "../../03_tipos_e_calculos/capitulo.md?raw";
 import chapter04Raw from "../../04_condicionais_e_validacao/capitulo.md?raw";
 import chapter05Raw from "../../05_listas_e_colecoes/capitulo.md?raw";
+import chapter06Raw from "../../06_lacos_e_processamento/capitulo.md?raw";
+import chapter07Raw from "../../07_funcoes_e_decomposicao/capitulo.md?raw";
+import chapter08Raw from "../../08_dicionarios_e_registros/capitulo.md?raw";
+import chapter09Raw from "../../09_modulos_e_organizacao/capitulo.md?raw";
+import chapter10Raw from "../../10_arquivos_e_json/capitulo.md?raw";
+import chapter11Raw from "../../11_excecoes_e_depuracao/capitulo.md?raw";
+import chapter12Raw from "../../12_objetos_estado_comportamento/capitulo.md?raw";
 
 export type LessonSection = {
   id: string;
@@ -88,6 +95,13 @@ export const chapters: Chapter[] = [
   parseChapter(3, "Tipos de dados, conversões e cálculos", chapter03Raw),
   parseChapter(4, "Decisões e regras de validação", chapter04Raw),
   parseChapter(5, "Listas e coleções ordenadas", chapter05Raw),
+  parseChapter(6, "Laços e processamento repetido", chapter06Raw),
+  parseChapter(7, "Funções e decomposição de problemas", chapter07Raw),
+  parseChapter(8, "Dicionários e registros estruturados", chapter08Raw),
+  parseChapter(9, "Módulos e organização em arquivos", chapter09Raw),
+  parseChapter(10, "Arquivos de texto e JSON", chapter10Raw),
+  parseChapter(11, "Validação, exceções e depuração", chapter11Raw),
+  parseChapter(12, "Objetos: dados e comportamento", chapter12Raw),
 ];
 
 export function getChapter(number: number) {

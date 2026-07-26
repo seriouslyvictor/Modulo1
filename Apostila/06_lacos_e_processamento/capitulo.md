@@ -16,7 +16,7 @@ Neste encontro, usaremos laços para percorrer coleções, repetir cálculos e c
 
 ## Antes de começar
 
-Este capítulo é autocontido. Copie `starter/` e abra a cópia no VS Code.
+Este capítulo é autocontido. Baixe e extraia o pacote inicial desta seção. Se estiver usando a pasta completa da apostila, copie `starter/`. Abra a cópia no VS Code.
 
 ```text
 starter/
@@ -28,7 +28,15 @@ starter/
 
 Você precisa reconhecer listas, índices, `len()`, condicionais e operações numéricas.
 
+Execute `python verificar_capitulo.py`. A saída esperada é:
+
+```text
+Ambiente pronto para o Capítulo 6.
+```
+
 ## Objetivos de aprendizagem
+
+Ao concluir este capítulo, você deverá conseguir:
 
 - percorrer uma lista com `for`;
 - gerar sequências com `range()`;
@@ -39,6 +47,12 @@ Você precisa reconhecer listas, índices, `len()`, condicionais e operações n
 - reconhecer um laço infinito;
 - escolher entre `for` e `while`;
 - depurar um acumulador reiniciado no lugar errado.
+
+## Situação-problema
+
+Um relatório de estoque precisa aplicar a mesma regra a cada produto: exibir a quantidade, classificar a situação e atualizar os totais. Repetir essas instruções manualmente torna o programa longo e difícil de atualizar.
+
+Os laços permitem descrever a regra uma vez e aplicá-la a todos os itens.
 
 ## Repetindo com `for`
 
@@ -248,6 +262,8 @@ Use `for` quando você percorre uma coleção ou conhece a sequência de repeti�
 
 Abra `starter/relatorio_base.py`. O arquivo fornece produtos e quantidades.
 
+Antes do laço, crie os acumuladores com valor inicial `0`.
+
 Durante o laço:
 
 1. exiba o nome e a quantidade de cada produto;
@@ -265,6 +281,14 @@ Total de unidades: 18
 Produtos esgotados: 1
 Produtos críticos: 1
 ```
+
+### Checklist da prática
+
+- [ ] Os três acumuladores começam antes do laço.
+- [ ] O laço percorre todos os índices das listas.
+- [ ] Cada produto aparece com sua quantidade.
+- [ ] As condições distinguem itens esgotados e críticos.
+- [ ] O resumo aparece somente depois do laço.
 
 > **Pausa sugerida:** este é um bom ponto para o intervalo.
 
@@ -303,6 +327,8 @@ quantidades = [10, 0, 3, 7, 1]
 estoque_minimo = 3
 ```
 
+### Requisitos
+
 O programa deverá:
 
 1. exibir cada produto e sua quantidade;
@@ -313,9 +339,14 @@ O programa deverá:
 
 Use apenas recursos estudados até aqui. Não use dicionários, funções ou inteligência artificial.
 
-### Resultado esperado do resumo
+### Resultado esperado
 
 ```text
+Caderno: 10 — adequado
+Caneta: 0 — esgotado
+Borracha: 3 — crítico
+Lápis: 7 — adequado
+Régua: 1 — crítico
 Total de unidades: 21
 Esgotados: 1
 Críticos: 2
@@ -353,6 +384,13 @@ Crie os quatro acumuladores antes do `for`. Dentro dele, use uma estrutura `if` 
 ## Tarefa de saída
 
 Crie `somar_quantidades.py` com a lista `[2, 5, 1, 8]`. Use um laço para somar os valores e exibir `Total: 16`. Não use `sum()` neste exercício.
+
+### Critérios de conclusão
+
+- [ ] O acumulador começa em `0` antes do laço.
+- [ ] Cada quantidade é adicionada uma vez.
+- [ ] A saída final é `Total: 16`.
+- [ ] Consigo explicar por que o acumulador não deve começar dentro do laço.
 
 ## Vocabulário
 

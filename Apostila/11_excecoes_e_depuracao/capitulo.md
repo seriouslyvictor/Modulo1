@@ -16,7 +16,9 @@ Neste encontro, vamos aprofundar a leitura de erros e proteger operações espec
 
 ## Antes de começar
 
-Copie `starter/` inteira. Ela contém arquivos válidos e inválidos para teste.
+Este capítulo é autocontido. Baixe e extraia o pacote inicial desta seção. Se estiver usando a pasta completa da apostila, copie `starter/`. Abra a cópia no VS Code e mantenha o terminal nessa pasta.
+
+O pacote contém arquivos válidos e inválidos de propósito. Não corrija `produtos_corrompidos.json` antes da oficina.
 
 ```text
 starter/
@@ -30,7 +32,15 @@ starter/
 
 Você precisa saber usar funções, módulos, dicionários e JSON.
 
+Execute `python verificar_capitulo.py`. A saída esperada é:
+
+```text
+Ambiente pronto para o Capítulo 11.
+```
+
 ## Objetivos de aprendizagem
+
+Ao concluir este capítulo, você deverá conseguir:
 
 - distinguir erro de sintaxe, execução e lógica;
 - ler traceback de baixo para cima;
@@ -42,6 +52,12 @@ Você precisa saber usar funções, módulos, dicionários e JSON.
 - validar dados antes da gravação;
 - evitar `except:` genérico;
 - testar caminhos de sucesso e falha.
+
+## Situação-problema
+
+Um catálogo funciona com dados válidos, mas pode receber texto no lugar de número, tentar abrir um arquivo ausente ou encontrar JSON corrompido. Se todas essas falhas produzirem a mesma mensagem, fica difícil saber o que corrigir — e uma gravação precipitada pode apagar dados que ainda precisam ser recuperados.
+
+Neste capítulo, vamos identificar cada falha, tratar somente as exceções esperadas e impedir a gravação quando a leitura ou a validação não forem concluídas com segurança.
 
 ## Três categorias úteis
 
@@ -233,6 +249,18 @@ Abra `starter/catalogo_base.py` e implemente:
 
 Registre resultados esperados antes de executar.
 
+Use esta tabela para conferir o contrato:
+
+| Caso | Resultado esperado |
+|---|---|
+| `produtos_validos.json` | retorna uma lista com o produto |
+| `produtos_corrompidos.json` | informa o JSON inválido e retorna `None` |
+| arquivo que não existe | informa o caminho ausente e retorna `[]` |
+| produto sem nome | produz `ValueError` |
+| produto com preço zero | produz `ValueError` |
+
+Conclua quando cada caso tiver uma resposta diferente e o arquivo corrompido permanecer inalterado.
+
 > **Pausa sugerida:** este é um bom ponto para o intervalo.
 
 ## Oficina de depuração — O tratamento que esconde o bug
@@ -246,6 +274,8 @@ Investigue:
 3. Qual linha contém o nome incorreto?
 4. Qual operação realmente precisa de tratamento?
 5. Restrinja o `try` à conversão e capture `ValueError`.
+
+Depois da correção, um preço válido deve exibir o total. Um texto como `oito` deve exibir uma orientação para digitar um número. Se outro erro de programação surgir, ele deve continuar visível no traceback.
 
 ## Exercício independente — Cadastro seguro
 
@@ -267,6 +297,32 @@ O fluxo deverá carregar `produtos.json`, receber um produto, validar, adicionar
 Se o JSON estiver inválido, encerre sem gravar. Não use classes ou inteligência artificial.
 
 Use o mesmo contrato da prática: depois de carregar, teste `if produtos is None:` e encerre `main()` com `return`. Não é necessário criar tuplas nem retornar mais de um valor.
+
+### Roteiro de implementação
+
+1. Comece pelas três funções da prática acompanhada.
+2. Em `main()`, carregue `produtos.json` e encerre se o retorno for `None`.
+3. Converta preço e quantidade, monte o dicionário e chame `validar_produto()`.
+4. Capture `ValueError` para cancelar uma entrada inválida.
+5. Adicione o produto somente depois da validação.
+6. Mostre a confirmação somente quando `salvar_produtos()` retornar `True`.
+
+### Testes mínimos
+
+| Preparação ou entrada | Comportamento esperado |
+|---|---|
+| `produtos.json` não existe + produto válido | começa com catálogo vazio e salva o produto |
+| preço `oito` | cancela o cadastro sem salvar |
+| nome vazio | cancela o cadastro sem salvar |
+| quantidade `-1` | cancela o cadastro sem salvar |
+| cópia de um JSON corrompido | informa o problema e encerra sem alterar o arquivo |
+
+<details>
+<summary>Mostrar pista</summary>
+
+Coloque no mesmo `try` as conversões de preço e quantidade e a chamada de `validar_produto()`. Todas podem produzir `ValueError`. Deixe `produtos.append()` e a gravação depois desse bloco.
+
+</details>
 
 ## Resumo do capítulo
 
@@ -292,6 +348,14 @@ Use o mesmo contrato da prática: depois de carregar, teste `if produtos is None
 ## Tarefa de saída
 
 Crie uma função `converter_quantidade(texto)` que retorna um inteiro válido ou `None` quando a conversão falhar. Teste com `"12"`, `"0"` e `"doze"`.
+
+Saída esperada:
+
+```text
+12
+0
+None
+```
 
 ## Vocabulário
 

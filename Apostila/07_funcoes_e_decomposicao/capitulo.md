@@ -16,7 +16,11 @@ Neste encontro, vamos dividir regras de inventário em blocos pequenos, reutiliz
 
 ## Antes de começar
 
-Este capítulo é autocontido. Copie `starter/` e abra a cópia no VS Code.
+Este capítulo é autocontido. Para preparar a aula:
+
+1. copie a pasta `starter/` para uma pasta de trabalho;
+2. abra essa cópia no VS Code;
+3. execute `python verificar_capitulo.py` no terminal.
 
 ```text
 starter/
@@ -26,9 +30,17 @@ starter/
 └── verificar_capitulo.py
 ```
 
-Você precisa reconhecer variáveis, condicionais, listas, laços e cálculos.
+A saída esperada da verificação é:
+
+```text
+Ambiente pronto para o Capítulo 7.
+```
+
+Você precisa reconhecer variáveis, condicionais, listas, laços e cálculos. Não é necessário conhecer módulos, dicionários ou classes.
 
 ## Objetivos de aprendizagem
+
+Ao concluir este capítulo, você deverá conseguir:
 
 - definir e chamar funções;
 - diferenciar definição de execução;
@@ -39,6 +51,18 @@ Você precisa reconhecer variáveis, condicionais, listas, laços e cálculos.
 - compor funções pequenas;
 - verificar funções com casos de teste manuais;
 - escolher responsabilidades claras para cada função.
+
+## Situação-problema
+
+Um programa de inventário precisa calcular o custo, classificar o estoque e apresentar um resumo. Quando todas essas tarefas ficam misturadas em uma longa sequência, alterar uma regra pode afetar trechos que não deveriam mudar.
+
+Neste capítulo, cada tarefa receberá um nome e uma responsabilidade:
+
+```text
+dados → calcular custo → classificar estoque → exibir resumo
+```
+
+Esse é o ponto de partida da decomposição: dividir um problema maior em operações pequenas que podem ser compreendidas e verificadas separadamente.
 
 ## Definindo e chamando
 
@@ -63,6 +87,13 @@ nome_da_funcao()
 ```
 
 > **Erro comum:** definir corretamente e esperar uma saída sem chamar a função.
+
+### Como o Python executa
+
+1. Ao encontrar `def`, o Python registra a função.
+2. O bloco indentado ainda não é executado.
+3. Ao encontrar `exibir_cabecalho()`, o Python entra no bloco.
+4. Depois da última instrução, a execução volta ao ponto após a chamada.
 
 ## Parâmetros e argumentos
 
@@ -198,12 +229,12 @@ Antes de executar, registre a entrada e o resultado esperado. Depois compare com
 
 ## Prática acompanhada — Funções do inventário
 
-Abra `starter/funcoes_base.py` e complete:
+Abra `starter/funcoes_base.py`. Trabalhe nesta ordem:
 
 1. `calcular_custo(quantidade, preco_unitario)`, que retorna o produto dos valores;
 2. `classificar_estoque(quantidade, estoque_minimo)`, que retorna uma classificação;
 3. `exibir_resumo(nome, quantidade, custo, situacao)`, que apresenta os dados;
-4. chamadas com dados fornecidos no arquivo.
+4. use os dados fornecidos no arquivo para chamar as três funções.
 
 Mantenha cálculo, decisão e apresentação em funções diferentes.
 
@@ -215,6 +246,13 @@ Quantidade: 3
 Custo: R$ 25.50
 Situação: crítico
 ```
+
+Antes de seguir, confira:
+
+- o cálculo usa `return`, não `print()`;
+- a classificação cobre os quatro resultados;
+- o resumo apenas apresenta valores já calculados;
+- as chamadas ficam fora das definições.
 
 > **Pausa sugerida:** este é um bom ponto para o intervalo.
 
@@ -242,6 +280,12 @@ Investigue:
 
 ## Exercício independente — Resumo funcional de produto
 
+### Contexto
+
+Você vai montar uma pequena sequência de processamento: receber os dados, produzir dois resultados e apresentá-los. O objetivo é separar responsabilidades, não criar uma interface completa.
+
+### Requisitos
+
 Crie `resumo_produto.py` com as funções:
 
 - `calcular_valor_estoque(quantidade, preco)`: retorna o valor total;
@@ -257,8 +301,21 @@ Depois:
 
 Não use módulos, dicionários ou inteligência artificial.
 
+### Casos que você deve testar
+
+Use valores numéricos válidos na entrada. Confira pelo menos:
+
+| Quantidade | Mínimo | Situação esperada |
+|---:|---:|---|
+| `-1` | `5` | `inválido` |
+| `0` | `5` | `esgotado` |
+| `3` | `5` | `crítico` |
+| `8` | `5` | `adequado` |
+
+### Pista
+
 <details>
-<summary>Pista</summary>
+<summary>Mostrar pista</summary>
 
 Guarde cada retorno em uma variável antes de chamar `exibir_resumo`.
 
@@ -289,6 +346,8 @@ Guarde cada retorno em uma variável antes de chamar `exibir_resumo`.
 
 Crie uma função `calcular_total(quantidade, preco)` que retorna o resultado. Chame-a com dois pares de valores e compare as saídas com cálculos manuais.
 
+Conclua quando as duas chamadas produzirem os valores esperados e você conseguir explicar por que o cálculo está dentro da função, mas as chamadas estão fora dela.
+
 ## Vocabulário
 
 | Termo | Significado |
@@ -306,4 +365,3 @@ Crie uma função `calcular_total(quantidade, preco)` que retorna o resultado. C
 - [Definindo funções — tutorial oficial](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
 
 No próximo capítulo, representaremos cada produto como um registro com campos nomeados usando dicionários.
-

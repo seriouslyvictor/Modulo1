@@ -16,7 +16,7 @@ Neste encontro, vamos ler e gravar texto e usar JSON para preservar uma lista de
 
 ## Antes de começar
 
-Copie a pasta `starter/` inteira e execute os comandos com o terminal aberto nela.
+Este capítulo é autocontido. Baixe e extraia o pacote inicial desta seção. Se estiver usando a pasta completa da apostila, copie `starter/`. Abra a cópia no VS Code e mantenha o terminal nessa pasta.
 
 ```text
 starter/
@@ -30,7 +30,15 @@ starter/
 
 Você precisa saber usar módulos, listas de dicionários, laços e funções.
 
+Execute `python verificar_capitulo.py`. A saída esperada é:
+
+```text
+Ambiente pronto para o Capítulo 10.
+```
+
 ## Objetivos de aprendizagem
+
+Ao concluir este capítulo, você deverá conseguir:
 
 - explicar por que dados em variáveis não são persistentes;
 - abrir arquivos com `with`;
@@ -42,6 +50,12 @@ Você precisa saber usar módulos, listas de dicionários, laços e funções.
 - gravar JSON com `json.dump()`;
 - identificar estruturas compatíveis com JSON;
 - diagnosticar uma operação incompatível com o modo do arquivo.
+
+## Situação-problema
+
+Um catálogo funciona durante a execução, mas volta a ficar vazio sempre que o programa termina. Para continuar o trabalho depois, precisamos gravar os produtos em um arquivo e carregá-los na próxima execução.
+
+Neste capítulo, arquivos de texto guardarão anotações simples e JSON preservará uma lista de produtos com seus campos.
 
 ## Abrindo com `with`
 
@@ -149,6 +163,13 @@ print(produtos[0]["nome"])
 
 `json.load()` lê o arquivo e converte sua estrutura para valores Python.
 
+Saída para o exemplo de `produtos.json`:
+
+```text
+<class 'list'>
+Caderno
+```
+
 ## Gravando JSON
 
 ```python
@@ -196,6 +217,16 @@ Abra `starter/catalogo_base.py`.
 
 Trabalhe em uma cópia. O exercício modifica o arquivo.
 
+Com os arquivos iniciais, a saída esperada é:
+
+```text
+Caderno: 10
+Caneta: 5
+Produtos salvos: 3
+```
+
+Antes de continuar, confira se `produtos.json` possui três produtos e continua legível no VS Code.
+
 > **Pausa sugerida:** este é um bom ponto para o intervalo.
 
 ## Oficina de depuração — Modo incompatível
@@ -233,8 +264,14 @@ O programa deverá:
 
 Não use tratamento de exceções, classes ou inteligência artificial. Use entradas válidas e execute em uma cópia.
 
+Partindo do JSON inicial, o programa deve terminar com:
+
+```text
+Produtos cadastrados: 3
+```
+
 <details>
-<summary>Pista</summary>
+<summary>Mostrar pista</summary>
 
 Primeiro use `json.load()`. Depois de `append()`, abra novamente com `w` e use `json.dump()`.
 
@@ -265,6 +302,8 @@ Primeiro use `json.load()`. Depois de `append()`, abra novamente com `w` e use `
 
 Crie `salvar_resumo.py` que grava nome, quantidade e preço de um produto em `resumo.txt`, uma informação por linha. Depois, abra o arquivo em modo de leitura e exiba seu conteúdo.
 
+Conclua quando o terminal e o arquivo mostrarem as mesmas três informações, cada uma em sua própria linha.
+
 ## Vocabulário
 
 | Termo | Significado |
@@ -282,4 +321,3 @@ Crie `salvar_resumo.py` que grava nome, quantidade e preço de um produto em `re
 - [Módulo `json`](https://docs.python.org/3/library/json.html)
 
 No próximo capítulo, protegeremos leitura, conversão e gravação contra falhas previsíveis.
-

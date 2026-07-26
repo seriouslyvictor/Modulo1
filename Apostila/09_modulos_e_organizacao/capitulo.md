@@ -30,7 +30,15 @@ starter/
 
 Você precisa saber criar e chamar funções, trabalhar com listas e dicionários e executar um arquivo pelo terminal.
 
+Execute `python verificar_capitulo.py`. A saída esperada é:
+
+```text
+Ambiente pronto para o Capítulo 9.
+```
+
 ## Objetivos de aprendizagem
+
+Ao concluir este capítulo, você deverá conseguir:
 
 - explicar o que é um módulo;
 - importar módulos da biblioteca padrão;
@@ -121,6 +129,13 @@ situacao = regras_estoque.classificar(4, 5)
 
 print(valor)
 print(situacao)
+```
+
+Saída:
+
+```text
+34.0
+crítico
 ```
 
 Os dois arquivos devem estar na mesma pasta para este exemplo.
@@ -223,11 +238,33 @@ Abra `starter/regras_estoque.py` e `starter/app_base.py`.
 5. Proteja a chamada de `main()` com o `__name__` guard.
 6. Execute `python app_base.py` a partir da pasta `starter`.
 
+### Checklist
+
+- [ ] `app_base.py` importa `regras_estoque`.
+- [ ] `main()` recebe nome, quantidade, preço e estoque mínimo.
+- [ ] As funções são chamadas com o prefixo `regras_estoque.`.
+- [ ] A chamada de `main()` está protegida pelo `__name__` guard.
+- [ ] O resumo exibe nome, valor formatado e situação.
+
+Teste com:
+
+| Entrada | Resultado esperado |
+|---|---|
+| Nome `Caderno`, quantidade `4`, preço `8.50`, mínimo `5` | `Caderno: R$ 34.00 — crítico` |
+| Nome `Caneta`, quantidade `0`, preço `3.20`, mínimo `5` | `Caneta: R$ 0.00 — esgotado` |
+
 > **Pausa sugerida:** este é um bom ponto para o intervalo.
 
 ## Oficina de depuração — Importação com surpresa
 
 Execute `starter/importar_efeito.py`. Uma mensagem de teste aparece antes da mensagem esperada porque `modulo_com_efeito.py` executa um `print()` durante a importação.
+
+Antes da correção:
+
+```text
+Teste interno executado durante a importação.
+Função importada com sucesso.
+```
 
 Investigue:
 
@@ -235,6 +272,12 @@ Investigue:
 2. Ela está dentro de uma função?
 3. O que acontece no nível principal durante o import?
 4. Como o `__name__` guard protege o teste?
+
+Mova apenas o `print()` de teste para um `__name__` guard e execute `importar_efeito.py` novamente. A saída deverá conter somente:
+
+```text
+Função importada com sucesso.
+```
 
 ## Exercício independente — Orçamento modular
 
@@ -263,7 +306,24 @@ Em `app.py`:
 5. apresente o resumo;
 6. use o `__name__` guard.
 
-Não use arquivos JSON, classes ou inteligência artificial.
+Considere somente entradas válidas e use uma capacidade maior que zero. Não use arquivos JSON, classes ou inteligência artificial.
+
+### Teste mínimo
+
+Use quantidade `25`, preço `4.00` e capacidade `6`:
+
+```text
+Custo: R$ 100.00
+Caixas completas: 4
+Unidades restantes: 1
+```
+
+<details>
+<summary>Pista</summary>
+
+Em `calculos.py`, use multiplicação para o custo, divisão inteira para as caixas completas e resto da divisão para as unidades restantes.
+
+</details>
 
 ## Resumo do capítulo
 
@@ -288,6 +348,13 @@ Não use arquivos JSON, classes ou inteligência artificial.
 ## Tarefa de saída
 
 Crie `mensagens.py` com uma função que retorna um cabeçalho. Importe-a em `app.py`, crie `main()` e proteja a chamada.
+
+### Critérios
+
+- [ ] `mensagens.py` não executa `input()` nem `print()` durante a importação.
+- [ ] `app.py` chama a função usando o nome do módulo.
+- [ ] A chamada de `main()` está protegida.
+- [ ] Consigo explicar por que os dois arquivos têm responsabilidades diferentes.
 
 ## Vocabulário
 
