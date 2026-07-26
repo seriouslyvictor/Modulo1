@@ -12,6 +12,6 @@ Build app UI in `src/`. Keep `.openai/hosting.json`, `worker/index.js`, `scripts
 
 - Optimize for learning clarity and beginner confidence before visual polish.
 - Use the selected "Guided Chapter Rail" mock as the structural source of truth.
-- Build Chapters 1–4 together and keep their existing Markdown files as the canonical content source.
+- Build Chapters 1–5 together and keep their existing Markdown files as the canonical content source.
 - Use the Pinterest-derived warm neutral/red system only as temporary scaffolding; keep visual values behind CSS custom properties so official SENAI tokens can replace them later.
 - Use a client-only React + TypeScript + Vite architecture. Store progress locally for this validation pass; do not add accounts, a backend, a database, or an embedded Python runtime.

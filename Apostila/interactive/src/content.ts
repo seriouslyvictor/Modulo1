@@ -2,6 +2,7 @@ import chapter01Raw from "../../01_primeiros_passos/capitulo.md?raw";
 import chapter02Raw from "../../02_variaveis_e_entrada/capitulo.md?raw";
 import chapter03Raw from "../../03_tipos_e_calculos/capitulo.md?raw";
 import chapter04Raw from "../../04_condicionais_e_validacao/capitulo.md?raw";
+import chapter05Raw from "../../05_listas_e_colecoes/capitulo.md?raw";
 
 export type LessonSection = {
   id: string;
@@ -86,6 +87,7 @@ export const chapters: Chapter[] = [
   parseChapter(2, "Variáveis, textos, entrada e saída", chapter02Raw),
   parseChapter(3, "Tipos de dados, conversões e cálculos", chapter03Raw),
   parseChapter(4, "Decisões e regras de validação", chapter04Raw),
+  parseChapter(5, "Listas e coleções ordenadas", chapter05Raw),
 ];
 
 export function getChapter(number: number) {
