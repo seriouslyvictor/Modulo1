@@ -33,21 +33,26 @@ class Produto:
         return f"{self.nome}: {self.quantidade} — {self.classificar_estoque()}"
 
 
-produtos = [
-    Produto("Caderno", 8.50, 10, 3),
-    Produto("Caneta", 3.20, 2, 5),
-    Produto("Borracha", 2.50, 0, 2),
-]
+def main():
+    produtos = [
+        Produto("Caderno", 8.50, 10, 3),
+        Produto("Caneta", 3.20, 2, 5),
+        Produto("Borracha", 2.50, 0, 2),
+    ]
 
-produtos[0].adicionar(2)
-produtos[1].remover(1)
+    produtos[0].adicionar(2)
+    produtos[1].remover(1)
 
-for produto in produtos:
-    print(produto)
-    print(f"Valor: R$ {produto.valor_estoque():.2f}")
+    for produto in produtos:
+        print(produto)
+        print(f"Valor: R$ {produto.valor_estoque():.2f}")
 
-try:
-    produtos[2].remover(1)
-except ValueError as erro:
-    print(f"Operação recusada: {erro}")
+    try:
+        produtos[2].remover(1)
+    except ValueError as erro:
+        print(f"Operação recusada: {erro}")
+
+
+if __name__ == "__main__":
+    main()
 

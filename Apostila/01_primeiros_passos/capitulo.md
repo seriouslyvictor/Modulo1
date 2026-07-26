@@ -107,7 +107,7 @@ Use o menu Iniciar do Windows e procure por **Visual Studio Code**.
 4. Se aparecer **Disable** ou **Uninstall**, ela já está instalada.
 5. Se aparecer **Install**, selecione a extensão correta e faça a instalação no seu perfil.
 
-<!-- CAPTURA PENDENTE: 01_extensao_python.png — busca por Python com nome do publicador Microsoft destacado. -->
+> **Figura em produção:** captura da busca por Python na aba de extensões, com o nome do publicador Microsoft em destaque. Enquanto a imagem é finalizada, siga as instruções escritas acima.
 
 > **Atenção:** confira o nome do publicador. Existem várias extensões com nomes parecidos.
 
@@ -176,7 +176,7 @@ Se apenas `py` funcionar, avise o professor antes de continuar. Não tente alter
 
 O interpretador selecionado também pode aparecer na barra de status do VS Code.
 
-<!-- CAPTURA PENDENTE: 02_selecionar_interpretador.png — comando e opção Python 3 destacados, sem caminhos pessoais. -->
+> **Figura em produção:** captura da seleção do interpretador, com o comando e a opção Python 3 destacados (sem caminhos pessoais). Enquanto a imagem é finalizada, siga as instruções escritas acima.
 
 ## Verificação prática do ambiente
 
@@ -193,7 +193,7 @@ print("O ambiente está pronto para a primeira aula.")
 
 Com o arquivo aberto, clique no botão triangular **Run Python File**, no canto superior direito do editor.
 
-<!-- CAPTURA PENDENTE: 03_run_python_file.png — botão de execução destacado e terminal visível. -->
+> **Figura em produção:** captura do botão **Run Python File** em destaque, com o terminal visível. Enquanto a imagem é finalizada, siga as instruções escritas acima.
 
 O VS Code abrirá ou reutilizará o terminal e pedirá ao Python que execute o arquivo.
 
@@ -221,7 +221,7 @@ Esta seção ensina a repetir a preparação fora do laboratório. As telas pode
 
 Na primeira utilização, o gerenciador poderá concluir a instalação da versão estável do Python. Siga apenas as mensagens do instalador oficial.
 
-<!-- CAPTURA PENDENTE: 04_python_install_manager.png — página oficial e ação principal de instalação. -->
+> **Figura em produção:** captura da página oficial do gerenciador de instalação do Python, com a ação principal de instalação em destaque. Enquanto a imagem é finalizada, siga as instruções escritas acima.
 
 > **Segurança:** instale Python somente pelo site oficial ou pela Microsoft Store. Não use páginas de download desconhecidas.
 

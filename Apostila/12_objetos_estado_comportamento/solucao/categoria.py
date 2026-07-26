@@ -13,10 +13,15 @@ class Categoria:
         return self.nome
 
 
-papelaria = Categoria("Papelaria")
-higiene = Categoria("Higiene")
-papelaria.renomear("Material escolar")
+def main():
+    papelaria = Categoria("Papelaria")
+    higiene = Categoria("Higiene")
+    papelaria.renomear("Material escolar")
 
-print(papelaria)
-print(higiene)
+    print(papelaria)
+    print(higiene)
+
+
+if __name__ == "__main__":
+    main()
 

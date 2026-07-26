@@ -497,6 +497,8 @@ O uso de IA será proibido nos capítulos 1 a 13 para:
 
 Consultar a pasta de solução antes da tentativa e copiar código gerado por IA serão tratados da mesma forma: ambos eliminam a prática necessária.
 
+Quando travar sem poder usar IA, o estudante deverá: reler a seção anterior e as pistas graduais do exercício, registrar por escrito onde emperrou e chamar o professor. Pedir ajuda faz parte da prática; substituir o raciocínio por código pronto, não.
+
 ### Durante o projeto longo
 
 O uso de IA será permitido nos capítulos 14 e 15, desde que siga uma prática semelhante à de desenvolvimento real:

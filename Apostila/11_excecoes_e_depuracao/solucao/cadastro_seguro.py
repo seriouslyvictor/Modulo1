@@ -13,11 +13,13 @@ def carregar_produtos(caminho):
 
 
 def validar_produto(produto):
-    if not produto["nome"]:
+    if not isinstance(produto, dict):
+        raise ValueError("O produto deve ser um dicionário.")
+    if "nome" not in produto or not produto["nome"]:
         raise ValueError("O nome é obrigatório.")
-    if produto["preco"] <= 0:
+    if produto.get("preco", 0) <= 0:
         raise ValueError("O preço deve ser maior que zero.")
-    if produto["quantidade"] < 0:
+    if produto.get("quantidade", 0) < 0:
         raise ValueError("A quantidade não pode ser negativa.")
 
 

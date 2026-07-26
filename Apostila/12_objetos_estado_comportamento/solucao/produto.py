@@ -38,19 +38,24 @@ class Produto:
         return f"{self.nome} — {self.quantidade} unidades — R$ {self.preco:.2f}"
 
 
-caderno = Produto("Caderno", 8.50, 10, 3)
-caneta = Produto("Caneta", 3.20, 2, 5)
+def main():
+    caderno = Produto("Caderno", 8.50, 10, 3)
+    caneta = Produto("Caneta", 3.20, 2, 5)
 
-caderno.adicionar_estoque(5)
-caneta.remover_estoque(1)
+    caderno.adicionar_estoque(5)
+    caneta.remover_estoque(1)
 
-print(caderno)
-print(caderno.classificar_estoque())
-print(caneta)
-print(caneta.classificar_estoque())
+    print(caderno)
+    print(caderno.classificar_estoque())
+    print(caneta)
+    print(caneta.classificar_estoque())
 
-try:
-    caneta.remover_estoque(10)
-except ValueError as erro:
-    print(f"Operação recusada: {erro}")
+    try:
+        caneta.remover_estoque(10)
+    except ValueError as erro:
+        print(f"Operação recusada: {erro}")
+
+
+if __name__ == "__main__":
+    main()
 

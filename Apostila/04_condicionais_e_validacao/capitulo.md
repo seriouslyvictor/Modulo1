@@ -572,7 +572,7 @@ estoque adequado
 | `8.50` | `2` | `2` | `ativo` | Reposição necessária. |
 | `8.50` | `8` | `2` | `ativo` | Estoque adequado. |
 
-Use exatamente `ativo` ou `inativo` nos testes. Normalização de letras maiúsculas e espaços será tratada quando estudarmos operações de texto com mais profundidade.
+Use exatamente `ativo` ou `inativo` nos testes. Neste capítulo a comparação distingue maiúsculas e espaços: `"Ativo"` ou `" ativo "` não são iguais a `"ativo"`. Padronizar esse tipo de entrada depende de operações de texto que ainda não vimos, então mantenha os valores exatamente como indicado.
 
 ### Pistas graduais
 
