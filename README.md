@@ -37,30 +37,13 @@ Como o repositório ainda está sendo construído, a disponibilidade e a organiz
 
 ## Como utilizar
 
-Você pode navegar pelos arquivos diretamente no GitHub ou baixar uma cópia do repositório.
+O curso está disponível como uma apostila interativa publicada na web. Para começar, basta acessar:
 
-### Clonar com Git
+### [Acessar o Curso de Fundamentos em Python](https://fund-python.supernovasw.cloud)
 
-```bash
-git clone https://github.com/seriouslyvictor/Curso-Python.git
-cd Curso-Python
-```
+Não é necessário clonar o repositório, instalar dependências ou configurar um ambiente local. Abra o link no navegador e acompanhe os conteúdos e atividades disponíveis.
 
-### Baixar sem usar Git
-
-Na página do repositório, selecione **Code** e depois **Download ZIP**. Após o download, extraia o arquivo para uma pasta no seu computador.
-
-Em seguida, abra os materiais na ferramenta indicada em cada atividade. Quando possível, execute os exemplos, altere valores e observe como o comportamento do programa muda.
-
-## Requisitos
-
-Para aproveitar os exemplos executáveis, recomenda-se ter:
-
-- Python 3 instalado;
-- um editor de código, como Visual Studio Code;
-- curiosidade para testar, modificar e até quebrar os exemplos — faz parte do aprendizado.
-
-Dependendo do conteúdo, outras ferramentas ou bibliotecas poderão ser necessárias. Quando isso acontecer, as instruções específicas serão incluídas junto ao material.
+Este repositório mantém o código-fonte e os materiais que formam a plataforma.
 
 ## Status do projeto
 
