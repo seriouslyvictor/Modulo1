@@ -1,0 +1,104 @@
+# Curso de Fundamentos em Python
+
+Material didático gratuito para aprender e ensinar os fundamentos da linguagem Python.
+
+Este repositório reúne conteúdos, exemplos e exercícios utilizados em um curso de **Fundamentos em Linguagem Python**, com carga horária de referência de **60 horas**. A proposta é funcionar como uma **apostila interativa**: em vez de apenas ler sobre os conceitos, você pode executar, modificar e experimentar o código durante os estudos.
+
+> [!IMPORTANT]
+> Este material está em desenvolvimento. Algumas aulas, explicações e atividades ainda estão incompletas ou em revisão e podem mudar ao longo do tempo.
+
+## Sobre o material
+
+O conteúdo foi organizado com foco em quem está começando a programar e também pode ser usado por professores, instrutores e grupos de estudo como apoio em aulas, oficinas e treinamentos.
+
+Você pode usar este repositório para:
+
+- estudar Python no seu próprio ritmo;
+- acompanhar aulas de fundamentos de programação;
+- executar e adaptar exemplos;
+- praticar por meio de exercícios;
+- preparar aulas e atividades educacionais;
+- consultar conceitos já estudados.
+
+## Para quem é este curso?
+
+Este material é indicado principalmente para:
+
+- pessoas sem experiência prévia em programação;
+- estudantes em busca de uma introdução prática a Python;
+- professores e instrutores que desejam exemplos para suas aulas;
+- profissionais que querem revisar fundamentos da linguagem.
+
+## Conteúdos abordados
+
+Ao longo do material, você encontrará conteúdos relacionados aos principais fundamentos de Python, incluindo conceitos introdutórios, exemplos práticos e exercícios.
+
+Como o repositório ainda está sendo construído, a disponibilidade e a organização dos tópicos podem variar. Novos conteúdos serão adicionados e os materiais existentes poderão ser revisados.
+
+## Como utilizar
+
+Você pode navegar pelos arquivos diretamente no GitHub ou baixar uma cópia do repositório.
+
+### Clonar com Git
+
+```bash
+git clone https://github.com/seriouslyvictor/Curso-Python.git
+cd Curso-Python
+```
+
+### Baixar sem usar Git
+
+Na página do repositório, selecione **Code** e depois **Download ZIP**. Após o download, extraia o arquivo para uma pasta no seu computador.
+
+Em seguida, abra os materiais na ferramenta indicada em cada atividade. Quando possível, execute os exemplos, altere valores e observe como o comportamento do programa muda.
+
+## Requisitos
+
+Para aproveitar os exemplos executáveis, recomenda-se ter:
+
+- Python 3 instalado;
+- um editor de código, como Visual Studio Code;
+- curiosidade para testar, modificar e até quebrar os exemplos — faz parte do aprendizado.
+
+Dependendo do conteúdo, outras ferramentas ou bibliotecas poderão ser necessárias. Quando isso acontecer, as instruções específicas serão incluídas junto ao material.
+
+## Status do projeto
+
+🚧 **Em construção**
+
+Parte do conteúdo ainda é **WIP** (*work in progress*). Isso significa que você pode encontrar:
+
+- seções ainda não finalizadas;
+- exercícios sem revisão definitiva;
+- mudanças na ordem dos conteúdos;
+- exemplos que serão ampliados;
+- novos módulos sendo preparados.
+
+Mesmo assim, o que já está publicado permanece disponível para estudo e uso em atividades educacionais.
+
+## Uso gratuito
+
+Este material é disponibilizado gratuitamente para estudantes, professores e demais pessoas interessadas em aprender ou ensinar Python.
+
+Você pode estudar, compartilhar o link do repositório e utilizar os materiais como apoio educacional. Se o conteúdo ajudar em suas aulas ou estudos, uma referência a este repositório será sempre bem-vinda.
+
+> A disponibilidade gratuita do material não substitui os termos definidos em um eventual arquivo de licença do projeto.
+
+## Como contribuir
+
+Sugestões, correções e melhorias são bem-vindas. Você pode contribuir:
+
+1. abrindo uma **Issue** para relatar um problema ou sugerir um tema;
+2. criando um **Fork** do repositório;
+3. fazendo suas alterações em uma nova branch;
+4. enviando um **Pull Request** com uma descrição clara da contribuição.
+
+Ao encontrar um erro, tente informar em qual arquivo ou atividade ele aparece. Isso torna a revisão mais rápida.
+
+## Autor
+
+Material desenvolvido por [Victor Schiavo](https://github.com/seriouslyvictor).
+
+---
+
+Se este repositório foi útil para você, considere deixar uma ⭐. Isso ajuda outras pessoas a encontrarem o material.
