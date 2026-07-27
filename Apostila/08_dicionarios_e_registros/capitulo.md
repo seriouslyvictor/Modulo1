@@ -21,18 +21,10 @@ Este capítulo é autocontido. Copie os arquivos de `starter/` e abra a cópia n
 ```text
 starter/
 ├── chave_inexistente.py
-├── produto_base.py
-├── README.md
-└── verificar_capitulo.py
+└── produto_base.py
 ```
 
 Você precisa reconhecer listas, laços, condicionais e funções simples.
-
-Execute `python verificar_capitulo.py`. A saída esperada é:
-
-```text
-Ambiente pronto para o Capítulo 8.
-```
 
 ## Objetivos de aprendizagem
 

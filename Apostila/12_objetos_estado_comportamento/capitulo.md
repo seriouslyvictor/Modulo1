@@ -21,18 +21,10 @@ Este capítulo é autocontido. Baixe e extraia o pacote inicial desta seção. S
 ```text
 starter/
 ├── produto_base.py
-├── README.md
-├── self_incorreto.py
-└── verificar_capitulo.py
+└── self_incorreto.py
 ```
 
 Você precisa saber usar funções, validação com `raise`, dicionários e f-strings.
-
-Execute `python verificar_capitulo.py`. A saída esperada é:
-
-```text
-Ambiente pronto para o Capítulo 12.
-```
 
 ## Objetivos de aprendizagem
 

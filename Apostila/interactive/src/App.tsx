@@ -30,6 +30,7 @@ import {
   type ReactNode,
   useEffect,
   useMemo,
+  useRef,
   useState,
 } from "react";
 import Markdown from "react-markdown";
@@ -209,7 +210,18 @@ function CodeBlock({
         <span>{label}</span>
         {canCopy ? (
           <button type="button" onClick={copyCode} aria-live="polite">
-            {copied ? <Check size={17} /> : <Copy size={17} />}
+            <span
+              className="t-icon-swap"
+              data-state={copied ? "b" : "a"}
+              aria-hidden="true"
+            >
+              <span className="t-icon" data-icon="a">
+                <Copy size={17} />
+              </span>
+              <span className="t-icon" data-icon="b">
+                <Check size={17} />
+              </span>
+            </span>
             {copied ? "Copiado" : "Copiar"}
           </button>
         ) : null}
@@ -218,6 +230,45 @@ function CodeBlock({
         <code>{code}</code>
       </pre>
     </div>
+  );
+}
+
+function AnimatedNumber({ value }: { value: string }) {
+  const groupRef = useRef<HTMLSpanElement>(null);
+  const isFirstRender = useRef(true);
+  const characters = Array.from(value);
+
+  useEffect(() => {
+    const group = groupRef.current;
+    if (!group) return;
+    if (isFirstRender.current) {
+      isFirstRender.current = false;
+      return;
+    }
+
+    group.classList.remove("is-animating");
+    void group.offsetHeight;
+    group.classList.add("is-animating");
+  }, [value]);
+
+  return (
+    <span className="t-digit-group" ref={groupRef}>
+      {characters.map((character, index) => {
+        const distanceFromEnd = characters.length - index;
+        const stagger =
+          distanceFromEnd === 2 ? "1" : distanceFromEnd === 1 ? "2" : undefined;
+
+        return (
+          <span
+            className="t-digit"
+            data-stagger={stagger}
+            key={`${index}:${character}`}
+          >
+            {character}
+          </span>
+        );
+      })}
+    </span>
   );
 }
 
@@ -509,7 +560,9 @@ function ChapterRail({
             <span>
               {chapterCompleted} de {chapter.sections.length} seções
             </span>
-            <strong>{percentage}%</strong>
+            <strong>
+              <AnimatedNumber value={`${percentage}%`} />
+            </strong>
           </div>
         </div>
 

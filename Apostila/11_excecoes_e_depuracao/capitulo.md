@@ -25,18 +25,10 @@ starter/
 ├── captura_ampla.py
 ├── catalogo_base.py
 ├── produtos_corrompidos.json
-├── produtos_validos.json
-├── README.md
-└── verificar_capitulo.py
+└── produtos_validos.json
 ```
 
 Você precisa saber usar funções, módulos, dicionários e JSON.
-
-Execute `python verificar_capitulo.py`. A saída esperada é:
-
-```text
-Ambiente pronto para o Capítulo 11.
-```
 
 ## Objetivos de aprendizagem
 

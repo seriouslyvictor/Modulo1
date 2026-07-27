@@ -30,27 +30,11 @@ Este capítulo é autocontido. Você não precisa recuperar os arquivos do encon
 
 ```text
 starter/
-├── README.md
 ├── calculadora_base.py
-├── soma_textual.py
-└── verificar_capitulo.py
+└── soma_textual.py
 ```
 
 Copie a pasta `starter/` para um local em que você possa editar os arquivos. Abra a cópia no VS Code.
-
-### Verificação rápida do ambiente
-
-Execute:
-
-```powershell
-python verificar_capitulo.py
-```
-
-Saída esperada:
-
-```text
-Ambiente pronto para o Capítulo 3.
-```
 
 ## Objetivos de aprendizagem
 
@@ -670,4 +654,3 @@ Crie `total_caixas.py`. O programa deverá:
 - [Expressões e operadores — referência oficial](https://docs.python.org/3/reference/expressions.html)
 
 No próximo capítulo, usaremos comparações e valores booleanos para validar preços, quantidades e disponibilidade antes de aceitar uma operação.
-

@@ -21,18 +21,10 @@ Este capítulo é autocontido. Copie os arquivos de `starter/` e abra a cópia n
 ```text
 starter/
 ├── indice_incorreto.py
-├── lista_base.py
-├── README.md
-└── verificar_capitulo.py
+└── lista_base.py
 ```
 
 Você precisa saber usar variáveis, strings, `input()`, conversões simples, condicionais e o operador `in`.
-
-Execute `python verificar_capitulo.py`. A saída esperada é:
-
-```text
-Ambiente pronto para o Capítulo 5.
-```
 
 ## Objetivos de aprendizagem
 
@@ -351,4 +343,3 @@ Crie `categorias.py` com três categorias iniciais. Receba uma quarta categoria,
 - [Métodos de listas](https://docs.python.org/3/tutorial/datastructures.html#more-on-lists)
 
 No próximo capítulo, usaremos laços para processar todos os itens de uma lista sem repetir manualmente as mesmas instruções.
-

@@ -27,39 +27,17 @@ Este capítulo é autocontido. Você não precisa recuperar os arquivos produzid
 - usar `print()` para exibir uma string;
 - localizar a linha indicada por uma mensagem de erro simples.
 
-Se alguma dessas ações ainda não estiver clara, use `starter/verificar_capitulo.py` para confirmar o ambiente e peça ajuda antes da prática independente.
+Se alguma dessas ações ainda não estiver clara, peça ajuda antes da prática independente.
 
 ### Arquivos iniciais
 
 ```text
 starter/
-├── README.md
 ├── ficha_base.py
-├── nome_incorreto.py
-└── verificar_capitulo.py
+└── nome_incorreto.py
 ```
 
 Copie a pasta `starter/` para um local em que você possa editar os arquivos. Abra a cópia no VS Code.
-
-### Verificação rápida do ambiente
-
-Execute:
-
-```powershell
-python verificar_capitulo.py
-```
-
-Se o laboratório utiliza `py`, execute:
-
-```powershell
-py verificar_capitulo.py
-```
-
-Saída esperada:
-
-```text
-Ambiente pronto para o Capítulo 2.
-```
 
 ## Objetivos de aprendizagem
 
@@ -625,4 +603,3 @@ Crie `identificacao_item.py`. O programa deverá:
 - [Literais de string formatados — f-strings](https://docs.python.org/3/reference/lexical_analysis.html#f-strings)
 
 No próximo capítulo, examinaremos os tipos dos valores e aprenderemos a converter entradas para realizar cálculos de preço, quantidade e total.
-

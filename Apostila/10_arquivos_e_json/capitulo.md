@@ -23,18 +23,10 @@ starter/
 ├── catalogo_base.py
 ├── modo_incorreto.py
 ├── produtos.json
-├── rascunho.txt
-├── README.md
-└── verificar_capitulo.py
+└── rascunho.txt
 ```
 
 Você precisa saber usar módulos, listas de dicionários, laços e funções.
-
-Execute `python verificar_capitulo.py`. A saída esperada é:
-
-```text
-Ambiente pronto para o Capítulo 10.
-```
 
 ## Objetivos de aprendizagem
 

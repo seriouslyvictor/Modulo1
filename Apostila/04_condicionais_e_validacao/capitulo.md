@@ -30,27 +30,11 @@ Este capítulo é autocontido. Você não precisa recuperar arquivos de outros e
 
 ```text
 starter/
-├── README.md
 ├── classificacao_incorreta.py
-├── validador_base.py
-└── verificar_capitulo.py
+└── validador_base.py
 ```
 
 Copie a pasta `starter/` para um local em que você possa editar os arquivos. Abra a cópia no VS Code.
-
-### Verificação rápida do ambiente
-
-Execute:
-
-```powershell
-python verificar_capitulo.py
-```
-
-Saída esperada:
-
-```text
-Ambiente pronto para o Capítulo 4.
-```
 
 ## Objetivos de aprendizagem
 

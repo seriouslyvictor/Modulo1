@@ -23,18 +23,10 @@ starter/
 ├── app_base.py
 ├── importar_efeito.py
 ├── modulo_com_efeito.py
-├── README.md
-├── regras_estoque.py
-└── verificar_capitulo.py
+└── regras_estoque.py
 ```
 
 Você precisa saber criar e chamar funções, trabalhar com listas e dicionários e executar um arquivo pelo terminal.
-
-Execute `python verificar_capitulo.py`. A saída esperada é:
-
-```text
-Ambiente pronto para o Capítulo 9.
-```
 
 ## Objetivos de aprendizagem
 

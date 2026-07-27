@@ -21,18 +21,10 @@ Este capítulo é autocontido. Baixe e extraia o pacote inicial desta seção. S
 ```text
 starter/
 ├── acumulador_incorreto.py
-├── relatorio_base.py
-├── README.md
-└── verificar_capitulo.py
+└── relatorio_base.py
 ```
 
 Você precisa reconhecer listas, índices, `len()`, condicionais e operações numéricas.
-
-Execute `python verificar_capitulo.py`. A saída esperada é:
-
-```text
-Ambiente pronto para o Capítulo 6.
-```
 
 ## Objetivos de aprendizagem
 

@@ -19,21 +19,12 @@ Neste encontro, vamos dividir regras de inventário em blocos pequenos, reutiliz
 Este capítulo é autocontido. Para preparar a aula:
 
 1. copie a pasta `starter/` para uma pasta de trabalho;
-2. abra essa cópia no VS Code;
-3. execute `python verificar_capitulo.py` no terminal.
+2. abra essa cópia no VS Code.
 
 ```text
 starter/
 ├── funcoes_base.py
-├── README.md
-├── retorno_incorreto.py
-└── verificar_capitulo.py
-```
-
-A saída esperada da verificação é:
-
-```text
-Ambiente pronto para o Capítulo 7.
+└── retorno_incorreto.py
 ```
 
 Você precisa reconhecer variáveis, condicionais, listas, laços e cálculos. Não é necessário conhecer módulos, dicionários ou classes.
